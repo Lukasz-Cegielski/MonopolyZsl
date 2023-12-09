@@ -1,0 +1,304 @@
+TEHCHNIK ELEKTRONIK
+
+1.Które wielkości należy mierzyć w celu wyznaczenia zakresu liniowości wzmacniacza?
+
+ Napięcie wejściowe i moc wyjściową.
+ Napięcie wyjściowe i częstotliwość.
+ Napięcie wyjściowe i napięcie zasilania.
+ Napięcie wejściowe i wyjściowe.
+
+2.Podczas sprawdzania instalacji domofonu cyfrowego, po podłączeniu napięcia zasilającego okazało się, że w słuchawce słychać piski i rozmowa jest słabo słyszalna. Aby usunąć usterkę należy
+
+ obniżyć poziom głośności wywołania w unifonie.
+ podwyższyć napięcie zasilania elektrozaczepu.
+ wyczyścić przyciski w kasecie rozmownej.
+ wyregulować poziom głośności w centrali.
+
+3.Podłączenie po jednej stronie toru transmisyjnego źródła sygnału o stałej i znanej mocy, a po drugiej miernika mocy optycznej, umożliwia bezpośrednie określenie
+
+ tłumienia złączy.
+ długości światłowodu.
+ miejsca spawu lub zgięcia włókna światłowodowego.
+ całkowitego tłumienia toru optycznego.
+
+4.Do sprawdzenia ciągłości połączeń w obwodach drukowanych urządzeń elektronicznych należy użyć
+
+ omomierza.
+ watomierza.
+ woltomierza.
+ amperomierza.
+
+5.Która technologia wykorzystuje światło podczerwone do transmisji danych?
+
+ IRDA
+ BLUETOOTH
+ ZIGBEE
+ WIMAX
+
+6.Prawidłowa kolejność czynności przy wymianie uszkodzonej czujki ruchu instalacji kontroli dostępu jest następująca:
+
+ wpisać kod użytkownika, odłączyć zasilanie AC, odłączyć akumulator, wymienić czujkę.
+ wpisać kod serwisowy, odłączyć akumulator, wymienić czujkę.
+ wpisać kod użytkownika, odłączyć zasilanie AC, wymienić czujkę.
+ wpisać kod serwisowy, odłączyć zasilanie AC, odłączyć akumulator, wymienić czujkę.
+
+7.Która z poniższych liczb nie jest zapisem w kodzie BCD8421?
+
+ 01100110
+ 00000000
+ 10011001
+ 11111111
+
+8.Na podstawie oględzin instalacji telewizyjnej nie można określić
+
+ uszkodzenia powłoki kabla.
+ skorodowania czaszy anteny.
+ uszkodzenia elektroniki konwertera.
+ zniekształcenia lustra czaszy anteny.
+
+TEHCHNIK INFORMATYK
+
+1.Zgodnie z normą TIA/EIA-568-B.1 kabel UTP 5e z przeplotem jest tworzony poprzez zamianę ułożenia we wtyczce 8P8C następujących par przewodów (odpowiednio według kolorów):
+
+ biało-zielony i zielony z biało-niebieskim i niebieskim.
+ biało-zielony i zielony z biało-brązowym i brązowym.
+ biało-pomarańczowy i pomarańczowy z biało-brązowym i brązowym.
+ biało-pomarańczowy i pomarańczowy z biało-zielonym i zielonym.
+
+2.Urządzeniem, które umożliwia komputerom bezprzewodowy dostęp do przewodowej sieci komputerowej, jest
+
+ punkt dostępu.
+ modem.
+ regenerator.
+ koncentrator.
+
+3.Host automatycznie pobiera adres IP z serwera DHCP. W przypadku gdy serwer DHCP ulegnie uszkodzeniu, karcie sieciowej zostanie przypisany adres IP z zakresu
+
+ 169.254.0.1 ÷ 169.254.255.254
+ 192.168.0.1 ÷ 192.168.255.254
+ 127.0.0.1 ÷ 127.255.255.255.254
+ 224.0.0.1 ÷ 224.255.255.254
+
+4.Które polecenie systemu z rodziny Windows pozwala sprawdzić, przechowywane w pamięci podręcznej komputera, zapamiętane tłumaczenia nazw DNS na adresy IP?
+
+ ipconfig /flushdns
+ ipconfig /release
+ ipconfig /displaydns
+ ipconfig /renew
+
+5.Typ transmisji danych do jednego bądź kilku komputerów w jednej chwili, w której odbiorcy są widziani dla nadawcy jako pojedynczy grupowy odbiorca, to
+
+ unicast.
+ broadcast.
+ anycast.
+ multicast.
+
+6.Oprogramowanie do wirtualizacji dostępne jako rola w systemie Windows Serwer 2012 to
+
+ VMware
+ Virtual Box
+ Hyper-V
+ Virtual PC
+
+7.Ile maksymalnie adresów można przydzielić hostom w sieci 10.0.0.0/22?
+
+ 512 adresów.
+ 510 adresów.
+ 1 022 adresy.
+ 1 024 adresy.
+
+8.Aby zabezpieczyć komunikację terminalową z serwerem, należy użyć połączenia z wykorzystaniem protokołu
+
+ Telnet
+ SSH
+ SFTP
+ TFTP
+
+TECHNIK PROGRAMISTA
+
+1.Wskaż znacznik pozwalający na zapisanie tekstu nieprawidłowego lub nieodpowiedniego w sposób przekreślony.
+
+ <s> </s>
+ <b> </b>
+ <em> </em>
+ <sub> </sub>
+
+2.Znacznik <pre> </pre> jest stosowany w celu wyświetlenia
+
+ znaku przekreślenia.
+ znaku wielokropka.
+ treści polską czcionką.
+ treści czcionką o stałej szerokości.
+
+3.W znaczniku meta w miejsce kropek należy wpisać
+
+<meta name="description" content="…">
+
+ nazwę edytora.
+ język dokumentu.
+ streszczenie treści strony.
+ informację o dostosowaniu do urządzeń mobilnych.
+
+4.W której części dokumentu HTML należy umieścić wewnętrzny arkusz stylów?
+
+ W ciele strony.
+ W części nagłówkowej strony.
+ W skrypcie dołączonym do strony.
+ Wewnątrz znacznika, którego styl dotyczy.
+
+5.Aby dołączyć kaskadowy arkusz stylów zapisany w zewnętrznym pliku, należy użyć następującego fragmentu kodu HTML
+
+ <meta charset="styl.css" />
+ <div id="styl.css" relation="css" />
+ <optionvalue="styl.css" type="text/css" />
+ <link rel="stylesheet" type="text/css" href="styl.css" />
+
+6.Głównym celem stosowania edytora WYSIWYG jest
+
+ szybka wizualizacja tworzonej strony.
+ wyszukiwanie błędów w bazie danych.
+ pobieranie z Internetu kompletnych portali WWW.
+ zautomatyzowanie odtwarzania plików multimedialnych.
+
+7.Aby obsłużyć połączenie z bazą MySQL podczas tworzenia aplikacji internetowej, można wykorzystać język
+
+ CSS
+ PHP
+ HTML
+ XHTML
+
+8.Aby wskazać błędy składniowe w kodzie HTML, należy zastosować
+
+ debugger.
+ walidator.
+ interpreter.
+ kompilator.
+
+TECHNIK TELEINFORMATYK
+
+1.W celu obliczenia przepływności strumienia cyfrowego generowanego przez pojedynczą rozmowę telefoniczną należy liczbę bitów przypadających na jedną próbkę pomnożyć przez
+
+ częstotliwość próbkowania.
+ częstotliwość pasma telefonicznego.
+ dolną częstotliwość pasma telefonicznego.
+ górną częstotliwość pasma telefonicznego.
+
+2.Pasmo fal radiowych oznaczone skrótem UHF (Ultra High Frequency) obejmuje zakres częstotliwości
+
+ 30 MHz ÷ 300 MHz
+ 3 MHz ÷ 30 MHz
+ 3 000 MHz ÷ 30 000 MHz
+ 300 MHz ÷ 3 000 MHz
+
+3.Jak jest oznaczona odmiana szerokopasmowego systemu telekomunikacyjnego FTTX (Fiber-To-The-X), w którym światłowód jest doprowadzony do mieszkania abonenta?
+
+ FTTH
+ FTTB
+ FTTN
+ FTTC
+
+4.W celu umożliwienia dostępu do Internetu komputerom, tabletom i innym urządzeniom w domu lub mieszkaniu należy zastosować ruter
+
+ szkieletowy.
+ dostępowy.
+ brzegowy.
+ korporacyjny.
+
+5.W którym medium transmisyjnym przesyłany sygnał jest najmniej narażony na zakłócenia radioelektryczne?
+
+ W kablu koncentrycznym.
+ W kablu światłowodowym.
+ W skrętce komputerowej ekranowanej.
+ W skrętce komputerowej nieekranowanej.
+
+6.Wskaż element sieci telefonii komórkowej GSM, który nie bierze udziału w zestawianiu połączeń między abonentami tej sieci, niekorzystającymi z usług sieci inteligentnych.
+
+ VLR (Visitor Location Register)
+ SCP (Service Control Point)
+ MSC (Mobile Switching Centre)
+ HLR (Home Location Register)
+
+7.Kabel optyczny oznaczony symbolem Z-XOTKtsd 16J ma powłokę zewnętrzną wykonaną
+
+ z poliuretanu.
+ z polwinitu.
+ z poliamidu.
+ z polietylenu.
+
+8.Usługa dodatkowa w sieci ISDN oznaczona skrótem CFNR (Call Forwarding No Reply) umożliwia przekierowanie połączenia, gdy abonent wywoływany
+
+ jest zajęty.
+ nie odpowiada.
+ jest nieosiągalny.
+ ma załączoną usługę DND.
+
+FOTOTECHNIK
+
+1.Obiektyw, wizjer, lampa błyskowa, migawka, układ zasilania to elementy budowy
+
+ analogowego odtwarzacza fonograficznego.
+ kamery internetowej.
+ cyfrowej kamery wideo.
+ cyfrowego aparatu fotograficznego.
+
+2.Który panel nie występuje w programie do obróbki grafiki rastrowej?
+
+ Mikser.
+ Ścieżki.
+ Próbki.
+ Kanały.
+
+3.W której rozdzielczości i w trybie koloru należy przygotować obraz cyfrowy przeznaczony do zamieszczania w prezentacji multimedialnej publikowanej w internecie?
+
+ 72 ppi, RGB
+ 300 ppi, RGB
+ 72 ppi, CMYK
+ 300 ppi, CMYK
+
+4.W którym trybie pracy aparatu fotograficznego można dokonać rejestracji obrazu z preselekcją czasu naświetlania?
+
+ Auto
+ P
+ Tv
+ Av
+
+5.Jak nazywa się specjalny adres, który posiada każda opublikowana strona i zasób internetowy?
+
+ IMAP
+ URL
+ FTP
+ IP
+
+6.Które oprogramowanie pozwala na tworzenie jednego slajdu w drugim techniką zoomowania z wykorzystaniem tzw. mapy myśli?
+
+ Paint 3D
+ Corel Draw
+ Prezi Desktop
+ LibreOffice Impress
+
+7.Obraz o walorach odwróconych i barwach dopełniających w stosunku do oryginału to
+
+ odbitka fotograficzna.
+ diapozytyw.
+ negatyw.
+ slajd.
+
+8.W którym trybie koloru należy zapisać fotografię cyfrową, która ma zostać wykorzystana w publikacji przygotowywanej przez drukarnię offsetową?
+
+ RGB
+ HSL
+ CMYK
+ Lab
+
+BRAK AUTOMATYKA
+BRAK ROBOTYKA
+
+
+
+
+
+
+
+
+
+
