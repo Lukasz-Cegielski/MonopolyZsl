@@ -1,0 +1,11 @@
+#main{
+width: 15vh;
+height: 15vh;
+background-image: url(2os.png);
+background-size: cover;
+background-color: black;
+/*border-style: dotted;
+border-color: red;*/
+border-radius: 1vh;
+
+}
