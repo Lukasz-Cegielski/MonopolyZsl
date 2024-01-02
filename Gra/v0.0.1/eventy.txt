@@ -1,18 +1,64 @@
 EVENTY
 
 
-1.Usiadłeś na parapecie gdy obok przechodził nauczyciel i zgarnąłeś uwagę. Cofasz się o 3 pola.
+1.Usiadłeś/aś na parapecie gdy obok przechodził nauczyciel i zgarnąłeś/aś uwagę. Cofasz się o 3 pola.
 
-2.Powiedziałeś dzień dobry Panu Dyrektorowi. Był zadowolony. Idziesz do przodu o 2 pola.
+2.Powiedziałeś/aś dzień dobry Panu Dyrektorowi. Był zadowolony. Idziesz do przodu o 2 pola.
 
 3.Okazało się, że dzisiaj jest niezapowiedziana kartkówka ale dostajesz 5. Idziesz do przodu o 3 pola.
 
 4.Okzało się, żę dzisiaj jest niezapowiedziana kartkówka i dostajesz 1. Cofasz się o 3 pola.
 
-5.Okzało się, że dzisiaj jest niezapowiedziana kartkówka z której dostajesz 1 ale przebłagałeś nauczyciela na 2. Nic się nie dzieje.
+5.Okzało się, że dzisiaj jest niezapowiedziana kartkówka z której dostajesz 1 ale przebłagałeś/aś nauczyciela na 2. Nic się nie dzieje.
 
 6.Razem ze znajomym ścigacie się od sali 24 do portierni ale po drodze widzi was nauczyciel. Dostajecie uwagi. Ty i wybrany przez ciebie gracz cofacie się o 3 pola.
 
 7.Byłeś chory i przegapiłeś kartkówkę, umawiasz się na nowy termin. Stoisz 1 turę.
 
-8.Na lekcji puszczasz samoloty z papieru. Nauczyciel nie jest zadowolony i pyta kto to. Razem ze znajomymi wkopujecie innego kolegę. Wybrane przez ciebie gracz cofa się o 2 pola.
+8.Na lekcji puszczasz samoloty z papieru. Nauczyciel nie jest zadowolony i pyta kto to. Razem ze znajomymi wkopujecie innego kolegę. Wybrany przez ciebie gracz cofa się o 2 pola.
+
+9.Nauczyciel przyłapał cię na używaniu telefonu na lekcji. Dostajesz 1 za aktywność. Cofasz się o 3 pola.
+
+10.Czas na sprawdzian. Dostajesz 5. Idziesz o 3 pola do przodu.
+
+11.Czas na sprawdzian. Niestety dostajesz 1. Cofasz się o 3 pola.
+
+12.Nauczyciel postanowił wziąść do odpytywania ale akurat masz szczęśliwy numerek. Stoisz tam gdzie stałeś/aś.
+
+13.Nauczyciel postanowił wziąść do odpoytwyania niestety nie umiesz. Dostajesz 1. Cofasz się o 3 pola.
+
+14.Nauczyciel postanowił wziąść do odpytywania na szczęśćie umiesz. Dostajesz 4. Idziesz do przodu o 2 pola.
+
+15.Na przerwie podaczas grania w piłkę upadasz i łamiesz sobie rękę. Czekasz 2 tury.
+
+16.Na lekcji postanawiasz zrobić coś głupiego ale nauczyciel docenia twoje poczucie humoru. Idziesz do przodu o 1 pole.
+
+17.Postanawisz zagrać z nauczycielem w pokera o ocenę. Wygrywasz i dostajesz 4. Idziesz do przodu o 2 pola.
+
+18.Postanawisz zagrać z nauczycielem w pokera o ocenę. Przegrywasz i dostajesz 1. Cofasz się o 3 pola.
+
+19.Postanawisz zagrać z nauczycielem w pokera o ocenę. Nayczeciel jest oburzony tym pomysłem. Dostajesz uwagę. Cofasz się o 2 pola.
+
+20.Poślizgnołeś się na boisku od koszykówki ale nic ci nie jest. Stoisz tam gdzie stałeś/aś.
+
+21.Dostajesz pochwałę za 100% frekwencję za miesiąc. Idziesz do przodu o 2 pola.
+
+22.Dostajesz pochwałę za 100% frekwencję za półrocze. Idziesz do przodu o 3 pola.
+
+23.Dostajesz pochwałę za 100% frekwencję za cały rok. Idziesz do przodu o 4 pola.
+
+24.Nie udało ci się zaliczyć półrocza. Wracasz na początek.
+
+25.Nauczyciel przyłapał cię na używaniu telefonu. Na szczęśćie kazał ci go schować. Stoisz tam gdzie stałeś/aś.
+
+26.Nauczyciel przyłapał cię na używaniu telefonu. Niestety nie był łaskawy i dotajesz 1. Cofasz się o 3 pola.
+
+27.Nauczyciel przyłapał cię na używaniu telefonu. Spytał się co tam na nim masz za ty postanowiłeś podzielić się tą informacją co rozbawiło nauczyciela. Idziesz o 1 pole do przodu.
+
+28.Zasneło ci się na lekcji. Nauczyciel postanowił dać ci uwagę. Cofasz się o 2 pola.
+
+29.Zasneło ci się na leckji. Nauczyciel postanowił cię obudzić i tym samym wystraszył cię co wszystkich rozbawiło. Idziesz o 1 pole do przodu.
+
+30.Zasneło ci się na lekcji. Nauczyciel postanowił nic z tym nie robić i dalej prowadził lekcję. Stoisz tam gdzie stałeś/aś.
+
+31.Podczas lekcji nagle słyszycie dźwięk próbnego alarmu i się ewakujecie. Wszyscy idą do przodu o 2 pola.
