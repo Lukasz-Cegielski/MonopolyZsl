@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(green-dirty-blackboard.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+.gracze {
+    display: none;
+    width: 25vw;
+    height: 20vh;
+    animation: pokaz 5s;
+    margin-top: 5vh;
+    margin-left: 37.5vw;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.mute {
+    margin-left: 96%;
+    background-color: transparent;
+    border: none;
+}
+
+#mute {
+    overflow: visible;
+    width: 100%;
+    height: 6vh;
+    border: none;
+    background-color: transparent
+}
+
+.title {
+    justify-content: center;
+    justify-items: center;
+}
+
+#title {
+    margin-left: 25vw;
+    margin-right: 25vw;
+    width: 50vw;
+    height: 15vh;
+
+}
+
+.start {
+    background-color: transparent;
+    border: none;
+    margin-top: 8vh;
+    margin-left: 43vw;
+}
+
+#start {
+    border: none;
+    background-color: transparent
+        /*background-image: url(start.png);
+    background-size: cover;*/
+}
+
+#modstart {
+    width: 14vw;
+    /* 13:10 ratio*/
+    height: 10vh;
+    /*do stylizacji guzika start*/
+}
+
+/*#start:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}*/
+
+.exit {
+    background-color: transparent;
+    border: none;
+    width: 3vw;
+    height: 5vh;
+}
+
+.arrow {
+    background-color: transparent;
+    border: none;
+    width: 6vw;
+    height: 12vh;
+}
+
+#main {
+    width: 15vh;
+    height: 15vh;
+    background-image: url(2os.png);
+    background-size: cover;
+    background-color: black;
+    /*border-style: dotted;
+border-color: red;*/
+    border-radius: 1vh;
+}
+
+#start:active {
+    transform: translateY(4px);
+}
+
+#main:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes pokaz {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+
+    }
+}
+
+/*
+@keyframes chowaj {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+        display: none;
+    }
+}*/
