@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <div class="all">
+            <div class="player">
+                nick: <b id="nickp1"></b></br>
+                pole: <b id="polep1"></b></br>
+                klasa: <b id="klasap1"></b></br>
+                kierunek: <b id="kierunekp1"></b></br>
+            </div>
+            <div class="player">
+                nick: <b id="nickp2"></b></br>
+                pole: <b id="polep2"></b></br>
+                klasa: <b id="klasap2"></b></br>
+                kierunek: <b id="kierunekp2"></b></br>
+            </div>
+            <div class="player">
+                nick: <b id="nickp3"></b></br>
+                pole: <b id="polep3"></b></br>
+                klasa: <b id="klasap3"></b></br>
+                kierunek: <b id="kierunekp3"></b></br>
+            </div>
+            <div class="player">
+                nick: <b id="nickp4"></b></br>
+                pole: <b id="polep4"></b></br>
+                klasa: <b id="klasap4"></b></br>
+                kierunek: <b id="kierunekp4"></b></br>
+            </div>
+            <div class="pytanie">
+                losowana prawidłowa odpowiedź:<b id="odp"></b></br>
+                <button class="odpbutton" onclick="odp('A')" type="button" disabled>A</button>
+                <button class="odpbutton" onclick="odp('B')" type="button" disabled>B</button>
+                <button class="odpbutton" onclick="odp('C')" type="button" disabled>C</button>
+                <button class="odpbutton" onclick="odp('D')" type="button" disabled>D</button>
+            </div>
+            <button id="kostka" onclick="rzut()">Rzut kostką</button>
+            parzyste pola są pytaniami</br>
+            nieparzyste eventami</br>
+            obecna tura: <b id="currentturn"></b>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
