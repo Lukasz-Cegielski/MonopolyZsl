@@ -1,0 +1,16 @@
+.all{
+    display: flex;
+    justify-content: space-around;
+}
+#danegracza1{
+    border: 2px solid red;
+}
+#danegracza2{
+    border: 2px solid yellow;
+}
+#danegracza3{
+    border: 2px solid green;
+}
+#danegracza4{
+    border: 2px solid blue;
+}
