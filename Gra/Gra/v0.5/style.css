@@ -1,0 +1,79 @@
+.all {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 20%;
+    margin: 0vh;
+    height: 100%h;
+}
+
+#danegracza1 {
+    border: 2vb solid red;
+    height: 20%;
+    background-color: red;
+}
+
+#danegracza2 {
+    border: 2vb solid yellow;
+    height: 20%;
+    background-color: yellow;
+}
+
+#danegracza3 {
+    border: 2vb solid green;
+    height: 20%;
+    background-color: green;
+}
+
+#danegracza4 {
+    border: 2vb solid blue;
+    height: 20%;
+    background-color: blue;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    background-image: url(blat\ debowy.png);
+}
+
+#plansza {
+    margin-top: 8%;
+    width: 50vw;
+    height: 70vh;
+    border: 0px solid black;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#row {
+    display: flex;
+    flex-direction: row;
+}
+
+#pole {
+    width: 5vh;
+    height: 5vh;
+    margin: 1px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#puste_pole {
+    width: 5vh;
+    height: 5vh;
+    border: 1px;
+    margin: 1px;
+}
+
+/* #p1 {
+    width: 1vw;
+    height: 2vh;
+    border: 1px solid black;
+    background-color: red;
+} */
