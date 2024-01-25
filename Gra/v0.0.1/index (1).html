@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <div class="all">
+            <div class="player" id="danegracza1">
+                nick: <b id="nickp1"></b></br>
+                pole: <b id="polep1"></b></br>
+                klasa: <b id="klasap1"></b></br>
+                kierunek: <b id="kierunekp1"></b></br>
+            </div>
+            <div class="player" id="danegracza2">
+                nick: <b id="nickp2"></b></br>
+                pole: <b id="polep2"></b></br>
+                klasa: <b id="klasap2"></b></br>
+                kierunek: <b id="kierunekp2"></b></br>
+            </div>
+            <div class="player" id="danegracza3">
+                nick: <b id="nickp3"></b></br>
+                pole: <b id="polep3"></b></br>
+                klasa: <b id="klasap3"></b></br>
+                kierunek: <b id="kierunekp3"></b></br>
+            </div>
+            <div class="player" id="danegracza4">
+                nick: <b id="nickp4"></b></br>
+                pole: <b id="polep4"></b></br>
+                klasa: <b id="klasap4"></b></br>
+                kierunek: <b id="kierunekp4"></b></br>
+            </div>
+            </div>
+            <div class="pytanie">
+                losowana prawidłowa odpowiedź:<b id="odp"></b></br>
+                <button class="odpbutton" id="odpbuttona" onclick="odp('A')" type="button" >A</button>
+                <button class="odpbutton" id="odpbuttonb" onclick="odp('B')" type="button" >B</button>
+                <button class="odpbutton" id="odpbuttonc" onclick="odp('C')" type="button" >C</button>
+                <button class="odpbutton" id="odpbuttond" onclick="odp('D')" type="button" >D</button>
+            </div>
+            <button id="kostka" onclick="rzut()">Rzut kostką</button>
+            parzyste pola są pytaniami</br>
+            nieparzyste eventami</br>
+            obecna tura: <b id="currentturn"></b>
+         
+        <div id="p1"></div>
+        <div id="p2"></div>
+        <div id="p3"></div>
+        <div id="p4"></div>
+        <div id="plansza">
+            <div id="row">
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="puste_pole"></div>
+                <div id="pole"></div>
+            </div>
+            <div id="row">
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+                <div id="pole"></div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
