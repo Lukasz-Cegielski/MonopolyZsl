@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="StylowanieSG.css">
+    <script src="mainpg.js"></script>
+</head>
+
+<body>
+    <!--https://www.freepik.com/free-photo/green-dirty-blackboard_13410582.htm#query=green%20board&position=1&from_view=keyword&track=ais&uuid=13b9d769-f5a3-4ee9-bc52-77deb56e6798-->
+    <button class="mute" id="guzior" onclick="muzykaon()"><img src="mute-button.png" id="mute">
+        <audio src="track1-intro.mp3" id="audio">
+        </audio>
+    </button>
+    <!--https://www.flaticon.com/free-icon/mute-button_6398985        https://www.flaticon.com/free-icon/speaker-filled-audio-tool_59284-->
+    <div class="title">
+        <img src="zsllogo.png" id="title"> <!-- Tytuł-->
+    </div>
+    <button class="start" id="start" onclick="pokaz()"><img src="start2.png" id="modstart"> </button>
+    <div class="gracze" id="gracze">
+        <button class="exit" onclick="schowaj()">
+            <img src="close.png" id="exit">
+        </button>
+        <div class="selector">
+            <button onclick="play4()" id="right" class="arrow">
+                <img src="arrowl.png">
+            </button>
+            <button onclick="submitValue2()" id="main"></button>
+            <button onclick="play3()" id="left" class="arrow">
+                <img src="arrowr.png">
+            </button>
+
+        </div>
+    </div>
+</body>
+
+</html>
