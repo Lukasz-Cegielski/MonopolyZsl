@@ -332,5 +332,16 @@ function koniecgry(winner) {
     //tutaj wyświetlą się świadectwa następnie gra wróci na stronę główną
 }
 function back() {
-    window.history.back()
+    if(animacjaKartyZaczetaEvent==false&&animacjaKartyZaczetaPytanie==false){
+    document.getElementById("kostka").disabled=true;
+    document.getElementById("trescPytaniaNaKarcie").innerHTML = ('Czy na pewno chcesz zakończyć grę?</br><button onclick="resetgame()" type="button">Tak</button> <button onclick="continuegame()" type="button">Nie</button>');
+    document.getElementById("pytanie").style.display="none";
+    kartaWyciagnietaPytanie();
+    }
+}
+function resetgame(){
+    window.history.back();
+}
+function continuegame(){
+    odlozKartePytanie();
 }

@@ -61,6 +61,7 @@ function kartaZnikaPytanie() {
         document.getElementById("kartaZPytaniem").style.display = "none";
         document.getElementById("kartaZPytaniemWrapper").style.top = "100";
         document.getElementById("kostka").disabled = false;
+        document.getElementById("pytanie").style.display="block";
     }
 }
 
