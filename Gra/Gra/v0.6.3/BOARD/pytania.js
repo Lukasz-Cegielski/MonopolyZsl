@@ -1,6 +1,6 @@
 const zawodowe=[
 {
-    idx:1,
+    idx:0,
     tresc: "Które wielkości należy mierzyć w celu wyznaczenia zakresu liniowości wzmacniacza?",
     odpa: "Napięcie wejściowe i moc wyjściową.",
     odpb: "Napięcie wyjściowe i częstotliwość.",
@@ -9,7 +9,7 @@ const zawodowe=[
     prawidlowaodp: "D"
 },
 {
-    idx:2,
+    idx:1,
     tresc: "Podczas sprawdzania instalacji domofonu cyfrowego, po podłączeniu napięcia zasilającego okazało się, że w słuchawce słychać piski i rozmowa jest słabo słyszalna. Aby usunąć usterkę należy",
     odpa: "obniżyć poziom głośności wywołania w unifonie.",
     odpb: "podwyższyć napięcie zasilania elektrozaczepu.",
@@ -18,7 +18,7 @@ const zawodowe=[
     prawidlowaodp: "D"
 },
 {
-    idx:3,
+    idx:2,
     tresc: "Podłączenie po jednej stronie toru transmisyjnego źródła sygnału o stałej i znanej mocy, a po drugiej miernika mocy optycznej, umożliwia bezpośrednie określenie.",
     odpa: "tłumienia złączy.",
     odpb: "długości światłowodu.",
@@ -27,7 +27,7 @@ const zawodowe=[
     prawidlowaodp: "D"
 },
 {
-    idx:4,
+    idx:3,
     tresc: "Do sprawdzenia ciągłości połączeń w obwodach drukowanych urządzeń elektronicznych należy użyć.",
     odpa: "omomierza.",
     odpb: "watomierza.",
@@ -36,7 +36,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:5,
+    idx:4,
     tresc: "Która technologia wykorzystuje światło podczerwone do transmisji danych?",
     odpa: "IRDA",
     odpb: "BLUETOOTH",
@@ -45,7 +45,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:6,
+    idx:5,
     tresc: "Prawidłowa kolejność czynności przy wymianie uszkodzonej czujki ruchu instalacji kontroli dostępu jest następująca:",
     odpa: "wpisać kod serwisowy, odłączyć akumulator, wymienić czujkę.",
     odpb: "wpisać kod serwisowy, odłączyć zasilanie AC, odłączyć akumulator, wymienić czujkę.",
@@ -54,7 +54,7 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:7,
+    idx:6,
     tresc: "Która z poniższych liczb nie jest zapisem w kodzie BCD8421?",
     odpa: "11111111",
     odpb: "01100110",
@@ -63,7 +63,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:8,
+    idx:7,
     tresc: "Na podstawie oględzin instalacji telewizyjnej nie można określić:",
     odpa: "uszkodzenia powłoki kabla.", odpb: "skorodowania czaszy anteny.",
     odpc: "uszkodzenia elektroniki konwertera.",
@@ -71,7 +71,7 @@ const zawodowe=[
     prawidlowaodp: "C"
 },
 {
-    idx:9,
+    idx:8,
     tresc: "Zgodnie z normą TIA/EIA-568-B.1 kabel UTP 5e z przeplotem jest tworzony poprzez zamianę ułożenia we wtyczce 8P8C następujących par przewodów (odpowiednio według kolorów):",
     odpa: "biało-pomarańczowy i pomarańczowy z biało-zielonym i zielonym.",
     odpb: "biało-zielony i zielony z biało-niebieskim i niebieskim.",
@@ -80,7 +80,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:10,
+    idx:9,
     tresc: "Urządzeniem, które umożliwia komputerom bezprzewodowy dostęp do przewodowej sieci komputerowej, jest:",
     odpa: "punkt dostępu.",
     odpb: "modem.",
@@ -89,7 +89,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:11,
+    idx:10,
     tresc: "Host automatycznie pobiera adres IP z serwera DHCP. W przypadku gdy serwer DHCP ulegnie uszkodzeniu, karcie sieciowej zostanie przypisany adres IP z zakresu:",
     odpa: "192.168.0.1 ÷ 192.168.255.254",
     odpb: "169.254.0.1 ÷ 169.254.255.254",
@@ -98,7 +98,7 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:12,
+    idx:11,
     tresc: "Które polecenie systemu z rodziny Windows pozwala sprawdzić, przechowywane w pamięci podręcznej komputera, zapamiętane tłumaczenia nazw DNS na adresy IP?",
     odpa: "ipconfig /flushdns",
     odpb: "ipconfig /release",
@@ -107,7 +107,7 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:13,
+    idx:12,
     tresc: "Typ transmisji danych do jednego bądź kilku komputerów w jednej chwili, w której odbiorcy są widziani dla nadawcy jako pojedynczy grupowy odbiorca, to:",
     odpa: "unicast.",
     odpb: "broadcast.",
@@ -116,7 +116,7 @@ const zawodowe=[
     prawidlowaodp: "D"
 },
 {
-    idx:14,
+    idx:13,
     tresc: "Oprogramowanie do wirtualizacji dostępne jako rola w systemie Windows Serwer 2012 to:",
     odpa: "Hyper-V",
     odpb: "VMware",
@@ -125,7 +125,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:15,
+    idx:14,
     tresc: "Ile maksymalnie adresów można przydzielić hostom w sieci 10.0.0.0/22?",
     odpa: "512 adresów.",
     odpb: "510 adresów.",
@@ -134,7 +134,7 @@ const zawodowe=[
     prawidlowaodp: "C"
 },
 {
-    idx:16,
+    idx:15,
     tresc: "Aby zabezpieczyć komunikację terminalową z serwerem, należy użyć połączenia z wykorzystaniem protokołu:",
     odpa: "Telnet",
     odpb: "SSH",
@@ -143,17 +143,17 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:17,
+    idx:16,
     tresc: "Wskaż znacznik pozwalający na zapisanie tekstu nieprawidłowego lub nieodpowiedniego w sposób przekreślony.",
-    odpa: "<s> </s>",
-    odpb: "<b> </b>",
-    odpc: "<em> </em>",
-    odpd: "<sub> </sub>",
+    odpa: "&lt;s&gt; &lt;/s&gt;",
+    odpb: "&lt;b&gt; &lt;/b&gt;",
+    odpc: "&lt;em&gt; &lt;/em&gt;",
+    odpd: "&lt;sub&gt; &lt;/sub&gt;",
     prawidlowaodp: "A"
 },
 {
-    idx:18,
-    tresc: "Znacznik <pre> </pre> jest stosowany w celu wyświetlenia:",
+    idx:17,
+    tresc: "Znacznik &lt;pre&gt; &lt;/pre&gt; jest stosowany w celu wyświetlenia:",
     odpa: "znaku przekreślenia.",
     odpb: "znaku wielokropka.",
     odpc: "treści polską czcionką.",
@@ -161,8 +161,8 @@ const zawodowe=[
     prawidlowaodp: "D"
 },
 {
-    idx:19,
-    tresc: "W znaczniku meta w miejsce kropek należy wpisać:  <meta name='description' content='…'>",
+    idx:18,
+    tresc: "W znaczniku meta w miejsce kropek należy wpisać:  &lt;meta name='description' content='…'&gt;",
     odpa: "nazwę edytora.",
     odpb: "język dokumentu.",
     odpc: "streszczenie treści strony.",
@@ -170,7 +170,7 @@ const zawodowe=[
     prawidlowaodp: "C"
 },
 {
-    idx:20,
+    idx:19,
     tresc: "W której części dokumentu HTML należy umieścić wewnętrzny arkusz stylów?",
     odpa: "W ciele strony.",
     odpb: "W części nagłówkowej strony.",
@@ -179,16 +179,16 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:21,
+    idx:20,
     tresc: "Aby dołączyć kaskadowy arkusz stylów zapisany w zewnętrznym pliku, należy użyć następującego fragmentu kodu HTML",
-    odpa: '<meta charset="styl.css" />',
-    odpb: '<div id="styl.css" relation="css" />',
-    odpc: '<optionvalue="styl.css" type="text/css" />',
-    odpd: '<link rel="stylesheet" type="text/css" href="styl.css" />',
+    odpa: '&lt;meta charset="styl.css" /&gt;',
+    odpb: '&lt;div id="styl.css" relation="css" /&gt;',
+    odpc: '&lt;optionvalue="styl.css" type="text/css" /&gt;',
+    odpd: '&lt;link rel="stylesheet" type="text/css" href="styl.css" /&gt;',
     prawidlowaodp: "D"
 },
 {
-    idx:22,
+    idx:21,
     tresc: "Głównym celem stosowania edytora WYSIWYG jest",
     odpa: "szybka wizualizacja tworzonej strony.",
     odpb: "wyszukiwanie błędów w bazie danych.",
@@ -197,7 +197,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:23,
+    idx:22,
     tresc: "Aby obsłużyć połączenie z bazą MySQL podczas tworzenia aplikacji internetowej, można wykorzystać język",
     odpa: "CSS",
     odpb: "PHP",
@@ -206,7 +206,7 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:24,
+    idx:23,
     tresc: "Aby wskazać błędy składniowe w kodzie HTML, należy zastosować",
     odpa: "debugger.",
     odpb: "walidator.",
@@ -215,7 +215,7 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:25,
+    idx:24,
     tresc: "W celu obliczenia przepływności strumienia cyfrowego generowanego przez pojedynczą rozmowę telefoniczną należy liczbę bitów przypadających na jedną próbkę pomnożyć przez",
     odpa: "częstotliwość próbkowania.",
     odpb: "częstotliwość pasma telefonicznego.",
@@ -224,7 +224,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:26,
+    idx:25,
     tresc: "Pasmo fal radiowych oznaczone skrótem UHF (Ultra High Frequency) obejmuje zakres częstotliwości",
     odpa: "30 MHz ÷ 300 MHz",
     odpb: "3 MHz ÷ 30 MHz",
@@ -233,7 +233,7 @@ const zawodowe=[
     prawidlowaodp: "D"
 },
 {
-    idx:27,
+    idx:26,
     tresc: "Jak jest oznaczona odmiana szerokopasmowego systemu telekomunikacyjnego FTTX (Fiber-To-The-X), w którym światłowód jest doprowadzony do mieszkania abonenta?",
     odpa: "FTTH",
     odpb: "FTTB",
@@ -242,7 +242,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:28,
+    idx:27,
     tresc: "W celu umożliwienia dostępu do Internetu komputerom, tabletom i innym urządzeniom w domu lub mieszkaniu należy zastosować ruter",
     odpa: "szkieletowy.",
     odpb: "dostępowy.",
@@ -251,7 +251,7 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:29,
+    idx:28,
     tresc: "W którym medium transmisyjnym przesyłany sygnał jest najmniej narażony na zakłócenia radioelektryczne?",
     odpa: "W kablu koncentrycznym.",
     odpb: "W kablu światłowodowym.",
@@ -260,7 +260,7 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:30,
+    idx:29,
     tresc: "Wskaż element sieci telefonii komórkowej GSM, który nie bierze udziału w zestawianiu połączeń między abonentami tej sieci, niekorzystającymi z usług sieci inteligentnych.",
     odpa: "VLR (Visitor Location Register)",
     odpb: "SCP (Service Control Point)",
@@ -269,7 +269,7 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:31,
+    idx:30,
     tresc: "Kabel optyczny oznaczony symbolem Z-XOTKtsd 16J ma powłokę zewnętrzną wykonaną",
     odpa: "z poliuretanu.",
     odpb: "z polwinitu.",
@@ -278,7 +278,7 @@ const zawodowe=[
     prawidlowaodp: "D"
 },
 {
-    idx:32,
+    idx:31,
     tresc: "Usługa dodatkowa w sieci ISDN oznaczona skrótem CFNR (Call Forwarding No Reply) umożliwia przekierowanie połączenia, gdy abonent wywoływany",
     odpa: "jest zajęty.",
     odpb: "nie odpowiada.",
@@ -287,7 +287,7 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:33,
+    idx:32,
     tresc: "Obiektyw, wizjer, lampa błyskowa, migawka, układ zasilania to elementy budowy",
     odpa: "analogowego odtwarzacza fonograficznego.",
     odpb: "kamery internetowej.",
@@ -296,7 +296,7 @@ const zawodowe=[
     prawidlowaodp: "D"
 },
 {
-    idx:34,
+    idx:33,
     tresc: "Który panel nie występuje w programie do obróbki grafiki rastrowej?",
     odpa: "Mikser.",
     odpb: "Ścieżki.",
@@ -305,7 +305,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:35,
+    idx:34,
     tresc: "W której rozdzielczości i w trybie koloru należy przygotować obraz cyfrowy przeznaczony do zamieszczania w prezentacji multimedialnej publikowanej w internecie?",
     odpa: "72 ppi, RGB",
     odpb: "300 ppi, RGB",
@@ -314,7 +314,7 @@ const zawodowe=[
     prawidlowaodp: "A"
 },
 {
-    idx:36,
+    idx:35,
     tresc: "W którym trybie pracy aparatu fotograficznego można dokonać rejestracji obrazu z preselekcją czasu naświetlania?",
     odpa: "Auto",
     odpb: "P",
@@ -323,7 +323,7 @@ const zawodowe=[
     prawidlowaodp: "C"
 },
 {
-    idx:37,
+    idx:36,
     tresc: "Jak nazywa się specjalny adres, który posiada każda opublikowana strona i zasób internetowy?",
     odpa: "IMAP",
     odpb: "URL",
@@ -332,7 +332,7 @@ const zawodowe=[
     prawidlowaodp: "B"
 },
 {
-    idx:38,
+    idx:37,
     tresc: "Które oprogramowanie pozwala na tworzenie jednego slajdu w drugim techniką zoomowania z wykorzystaniem tzw. mapy myśli?",
     odpa: "Paint 3D",
     odpb: "Corel Draw",
@@ -341,7 +341,7 @@ const zawodowe=[
     prawidlowaodp: "C"
 },
 {
-    idx:39,
+    idx:38,
     tresc: "Obraz o walorach odwróconych i barwach dopełniających w stosunku do oryginału to",
     odpa: "odbitka fotograficzna.",
     odpb: "diapozytyw.",
@@ -350,7 +350,7 @@ const zawodowe=[
     prawidlowaodp: "C"
 },
 {
-    idx:40,
+    idx:39,
     tresc: "W którym trybie koloru należy zapisać fotografię cyfrową, która ma zostać wykorzystana w publikacji przygotowywanej przez drukarnię offsetową?",
     odpa: "RGB",
     odpb: "HSL",
