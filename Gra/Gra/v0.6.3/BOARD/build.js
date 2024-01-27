@@ -1,23 +1,23 @@
-    // Get the value from localStorage
-    var value = localStorage.getItem('myValue'); // value jest stringiem jak cos
-    var iloscgraczy = parseInt(value)
-    //console.log(iloscgraczy) <-- Potrzebujemy tego?
-    switch (iloscgraczy) {
-        case 1:
-            document.getElementById("danegracza2").style.display = "none";
-            document.getElementById("danegracza3").style.display = "none";
-            document.getElementById("danegracza4").style.display = "none";
-            break;
-        case 2:
-            document.getElementById("danegracza3").style.display = "none";
-            document.getElementById("danegracza4").style.display = "none";
-            break;
-        case 3:
-            document.getElementById("danegracza4").style.display = "none";
-            break;
-        case 4:
-            break;
-    }
+// Get the value from localStorage
+var value = localStorage.getItem('myValue'); // value jest stringiem jak cos
+var iloscgraczy = parseInt(value)
+//console.log(iloscgraczy) <-- Potrzebujemy tego?
+switch (iloscgraczy) {
+    case 1:
+        document.getElementById("danegracza2").style.display = "none";
+        document.getElementById("danegracza3").style.display = "none";
+        document.getElementById("danegracza4").style.display = "none";
+        break;
+    case 2:
+        document.getElementById("danegracza3").style.display = "none";
+        document.getElementById("danegracza4").style.display = "none";
+        break;
+    case 3:
+        document.getElementById("danegracza4").style.display = "none";
+        break;
+    case 4:
+        break;
+}
 // to potrzeba wrzucić do naszego js w grze
 //ustawianie każdego gracza na startowej pozycji
 var currentturn = 1;
@@ -67,7 +67,7 @@ var efektpytanie;
 const possibleanwsers = ['A', 'B', 'C', 'D']
 //zmienne potrzebne żeby eventy działały
 var losowyevent;
-var efektevent=0;
+var efektevent = 0;
 //wyświetlanie wszystkiego na ekranie
 document.getElementById('polep1').innerHTML = polep1;
 document.getElementById('polep2').innerHTML = polep2;
@@ -100,9 +100,9 @@ async function pytanieevent(pole) {
         //event
         kartaWyciagnietaEvent();
         //losujemy event
-        losowyevent=Math.floor(Math.random() * 40)+1;
+        losowyevent = Math.floor(Math.random() * 40) + 1;
         //pobieramy treść i efekt eventu z pliku eventy.js
-        document.getElementById("trescEventuNaKarcie").innerHTML=(eventy[losowyevent].tresc);
+        document.getElementById("trescEventuNaKarcie").innerHTML = (eventy[losowyevent].tresc);
         return new Promise(resolve => {
             async function handleClick2() {
                 document.getElementById('potwierdzEvent').removeEventListener('click', handleClick2);
@@ -117,11 +117,11 @@ async function pytanieevent(pole) {
         //pytanie
         kartaWyciagnietaPytanie();
         //losowanie poprawnej odpowiedzi, w finalniej wersji będzie ona pobrana wraz z pytaniem z odpowiedniego pliku
-        losowepytanie = Math.floor(Math.random() * 40)+1;
+        losowepytanie = Math.floor(Math.random() * 40) + 1;
         correctanwser = zawodowe[losowepytanie].prawidlowaodp;
         //wyświetlenie poprawnej odpowiedz w dokumencie, do usunięcia
         document.getElementById("odp").innerHTML = correctanwser;
-        document.getElementById("trescPytaniaNaKarcie").innerHTML=(zawodowe[losowepytanie].tresc + "</br>A: " + zawodowe[losowepytanie].odpa+ "</br>B: " + zawodowe[losowepytanie].odpb+ "</br>C: " + zawodowe[losowepytanie].odpc+ "</br>D: " + zawodowe[losowepytanie].odpd);
+        document.getElementById("trescPytaniaNaKarcie").innerHTML = (zawodowe[losowepytanie].tresc + "</br>A: " + zawodowe[losowepytanie].odpa + "</br>B: " + zawodowe[losowepytanie].odpb + "</br>C: " + zawodowe[losowepytanie].odpc + "</br>D: " + zawodowe[losowepytanie].odpd);
         //uruchomienie guzików
         document.getElementById("odpbuttona").disabled = false;
         document.getElementById("odpbuttonb").disabled = false;
@@ -309,7 +309,7 @@ async function rzut() {
         currentturn = 1;
     } else { currentturn++; };
     //switch żeby tura pokazywała się jako nick gracza a nie cyfra
-    switch(currentturn){
+    switch (currentturn) {
         case 1:
             document.getElementById('currentturn').innerHTML = nick[nickp1];
             break;
@@ -322,7 +322,7 @@ async function rzut() {
         case 4:
             document.getElementById('currentturn').innerHTML = nick[nickp4];
             break;
-    }; 
+    };
     //włączenie z powrotem kostki przeniosłem do scriptkart.js
 }
 
@@ -330,4 +330,7 @@ async function rzut() {
 function koniecgry(winner) {
     alert("KONIEC GRY, GRACZ " + winner + " IDZIE NA STUDIA A RESZTA POWTARZA ROK!");
     //tutaj wyświetlą się świadectwa następnie gra wróci na stronę główną
+}
+function back() {
+    window.history.back()
 }

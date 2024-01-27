@@ -3,31 +3,32 @@
     justify-content: space-around;
     flex-direction: column;
     width: 20%;
-    margin-bottom: 1vh;
+    margin-left: 1vh;
+    margin-bottom: 6vh;
     /* height: 40h;*/
 }
 
 #danegracza1 {
-    border: 2vb solid red;
-    height: 15vh;
+    /* border: 2vb solid red; */
+    height: 16vh;
     background-color: red;
 }
 
 #danegracza2 {
-    border: 2vb solid blue;
-    height: 15vh;
+    /* border: 2vb solid blue; */
+    height: 16vh;
     background-color: blue;
 }
 
 #danegracza3 {
-    border: 2vb solid yellow;
-    height: 15vh;
+    /* border: 2vb solid yellow; */
+    height: 16vh;
     background-color: yellow;
 }
 
 #danegracza4 {
-    border: 2vb solid green;
-    height: 15vh;
+    /* border: 2vb solid green; */
+    height: 16vh;
     background-color: green;
 }
 
@@ -35,7 +36,7 @@
     height: 6vh;
     /* background-color: red; */
     width: 60vh;
-    margin-left: 45vw;
+    margin-left: 30vw;
     margin-bottom: 1vh;
     font-size: 3.5rem;
     justify-content: center;
@@ -48,6 +49,7 @@
 }
 
 body {
+    margin: 0;
     overflow: hidden;
     height: 100vh;
     width: 100vw;
@@ -66,14 +68,17 @@ body {
 }
 
 .row {
+    margin-left: 5vw;
     display: flex;
     flex-direction: row;
 }
 
 #kostka {
+    left: 80vw;
+    top: 60vh;
     width: 18vh;
     height: 18vh;
-    position: relative
+    position: fixed
 }
 
 .pole {
@@ -100,14 +105,31 @@ body {
 } */
 
 .mute {
+    width: 8vh;
+    height: 8vh;
     background-color: transparent;
     border: none;
+    position: fixed;
+    left: 93vw;
+    top: 0.5vh;
 }
 
 #mute {
     overflow: visible;
-    width: 100%;
-    height: 6vh;
+    width: 8vh;
+    height: 8vh;
     border: none;
     background-color: transparent
+}
+
+.back {
+    width: 8vh;
+    height: 8vh;
+    position: fixed;
+    top: 0.5vh;
+    margin-left: 0.5vh;
+    background-image: url(restart.png);
+    background-size: cover;
+    border: 0;
+    background-color: transparent;
 }

@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="stylekart.css">
     <script src="scriptkart.js"></script>
     <script src="skryptdomuzyki.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!--button do muzyki za nic nie działa nie ważne co robię ale jak wpiszecie muzykaon() w konsole to zagra-->>
 </head>
 
 <body>
-    <div class="tura">
+    <div class="tura"> <!-- chciałbym dać tutaj jakko bg kawalek zeszytu -->
         obecna tura: <b id="currentturn"></b>
     </div>
     <div class="calosc"> <!-- chcę żeby obecna tura była wyżej niż wszyskto więc potrzebuję tej klasy -->
@@ -43,11 +45,10 @@
                 klasa: <b id="klasap4"></b></br>
                 kierunek: <b id="kierunekp4"></b></br>
             </div>
-        </div>       
+        </div>
         <!--   <button id="kostka" onclick="rzut()">Rzut kostką</button> -->
-        parzyste pola są pytaniami</br>
-        nieparzyste eventami</br>
-
+        <!--  parzyste pola są pytaniami</br>
+        nieparzyste eventami</br> -->
         <div id="p1"></div>
         <div id="p2"></div>
         <div id="p3"></div>
@@ -256,10 +257,14 @@
                         <p id="trescPytaniaNaKarcie">JESTEM PYTANIEM NA KARCIE</p>
                         <div class="pytanie">
                             Prawidłowa odpowiedź:<b id="odp"></b></br>
-                            <button class="odpbutton" id="odpbuttona" onclick="odp('A');odlozKartePytanie();" type="button">A</button>
-                            <button class="odpbutton" id="odpbuttonb" onclick="odp('B');odlozKartePytanie();" type="button">B</button>
-                            <button class="odpbutton" id="odpbuttonc" onclick="odp('C');odlozKartePytanie();" type="button">C</button>
-                            <button class="odpbutton" id="odpbuttond" onclick="odp('D');odlozKartePytanie();" type="button">D</button>
+                            <button class="odpbutton" id="odpbuttona" onclick="odp('A');odlozKartePytanie();"
+                                type="button">A</button>
+                            <button class="odpbutton" id="odpbuttonb" onclick="odp('B');odlozKartePytanie();"
+                                type="button">B</button>
+                            <button class="odpbutton" id="odpbuttonc" onclick="odp('C');odlozKartePytanie();"
+                                type="button">C</button>
+                            <button class="odpbutton" id="odpbuttond" onclick="odp('D');odlozKartePytanie();"
+                                type="button">D</button>
                         </div>
                     </div>
                 </div>
@@ -273,20 +278,22 @@
                 </div>
             </div>
             <div class="stosKartPytanie">
-                <div class="kartaDoWyciagnieciaPytanie" id="kartaDoWyciagnieciaPytanie" style="top:0%;">
+                <div class="kartaDoWyciagnieciaPytanie" id="kartaDoWyciagnieciaPytanie" style="top:30vh;">
                 </div>
             </div>
             <div class="stosKartEvent">
-                <div class="kartaDoWyciagnieciaEvent" id="kartaDoWyciagnieciaEvent" style="top:0%;">
+                <div class="kartaDoWyciagnieciaEvent" id="kartaDoWyciagnieciaEvent" style="top:30vh;">
                 </div>
             </div>
 
         </div>
         <button id="kostka" onclick="rzut()" type="button">Rzut kostką</button>
+
         <button class="mute" type="button" id="guzior" onclick="muzykaon()"><img src="mute-button.png" id="mute">
             <audio src="track2-intro.mp3" id="audio">
             </audio>
         </button>
+        <button class="back" type="button" onclick="back()"></button>
 
         <script src="build.js"></script>
     </div>
