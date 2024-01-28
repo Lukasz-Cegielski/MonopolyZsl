@@ -9,7 +9,7 @@ var animacjaKartyZaczetaEvent = false;
 
 function kartaWyciagnietaPytanie() {
     document.getElementById("kartaZPytaniemWrapper").style.top = "0";
-    if (animacjaKartyZaczetaPytanie == false) {
+    if (animacjaKartyZaczetaPytanie == false&&koniecgryvar==false) {
         animacjaKartyZaczetaPytanie = true;
         animacjaKartyProcentWDolPytanie = 0;
         for (var i = 0; i <= 1000; i = i + 10) {
