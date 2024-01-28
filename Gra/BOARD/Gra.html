@@ -254,7 +254,7 @@
             <div id="kartaZPytaniemWrapper">
                 <div class="kartaZPytaniem" id="kartaZPytaniem" style="top:0%;">
                     <div class="kartaPytanieContent">
-                        <p id="trescPytaniaNaKarcie">JESTEM PYTANIEM NA KARCIE</p>
+                        <p id="trescPytaniaNaKarcie" class="kartacontent">JESTEM PYTANIEM NA KARCIE</p>
                         <div id="pytanie" style="display: block">
                             Prawidłowa odpowiedź:<b id="odp"></b></br>
                             <button class="odpbutton" id="odpbuttona" onclick="odp('A');odlozKartePytanie();"
@@ -272,8 +272,10 @@
             <div id="kartaZEventemWrapper">
                 <div class="kartaZEventem" id="kartaZEventem" style="top:0%;">
                     <div class="kartaEventContent">
-                        <p id="trescEventuNaKarcie">JESTEM EVENTEM NA KARCIE</p>
-                        <button id="potwierdzEvent" type="button" onclick="odlozKarteEvent()">OK</button>
+                        <p id="trescEventuNaKarcie" class="kartacontent">JESTEM EVENTEM NA KARCIE</p>
+                        <div id="eventbutton">
+                        <button id="potwierdzEvent" class="odpbutton" type="button" onclick="odlozKarteEvent()">OK</button>
+                        </div>
                     </div>
                 </div>
             </div>

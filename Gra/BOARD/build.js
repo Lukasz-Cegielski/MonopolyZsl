@@ -20,6 +20,7 @@ switch (iloscgraczy) {
 }
 // to potrzeba wrzucić do naszego js w grze
 //ustawianie każdego gracza na startowej pozycji
+var koniecgryvar=false;
 var currentturn = 1;
 var polep1 = 1;
 var polep2 = 1;
@@ -29,20 +30,26 @@ var klasap1 = 1;
 var klasap2 = 1;
 var klasap3 = 1;
 var klasap4 = 1;
+var statystyki=[
+    {gracz:1,rzuty_kostka:0,zapytane_pytania:0,poprawne_odpowiedzi:0,pola_przejdniete:0,klasy_powtorzone:0},
+    {gracz:2,rzuty_kostka:0,zapytane_pytania:0,poprawne_odpowiedzi:0,pola_przejdniete:0,klasy_powtorzone:0},
+    {gracz:3,rzuty_kostka:0,zapytane_pytania:0,poprawne_odpowiedzi:0,pola_przejdniete:0,klasy_powtorzone:0},
+    {gracz:4,rzuty_kostka:0,zapytane_pytania:0,poprawne_odpowiedzi:0,pola_przejdniete:0,klasy_powtorzone:0},
+];
 //losowanie nicków i zawodów
-const nick = ["testnick1", "testnick2", "testnick3", "testnick4"];
-var nickp1 = Math.floor(Math.random() * 4);
-var nickp2 = Math.floor(Math.random() * 4);
+const nick = ["Słowackiewicz", "Roztańczona parabola", "Goblin z 09a", "#1 Kuli fan", "Spadający sufit", "Napęd grawitacyjny", "Tux z Linux", "5318008"];
+var nickp1 = Math.floor(Math.random() * 8);
+var nickp2 = Math.floor(Math.random() * 8);
 while (nickp2 == nickp1) {
-    var nickp2 = Math.floor(Math.random() * 4);
+    var nickp2 = Math.floor(Math.random() * 8);
 }
-var nickp3 = Math.floor(Math.random() * 4);
+var nickp3 = Math.floor(Math.random() * 8);
 while (nickp3 == nickp1 || nickp3 == nickp2) {
-    var nickp3 = Math.floor(Math.random() * 4);
+    var nickp3 = Math.floor(Math.random() * 8);
 }
-var nickp4 = Math.floor(Math.random() * 4);
+var nickp4 = Math.floor(Math.random() * 8);
 while (nickp4 == nickp1 || nickp4 == nickp2 || nickp4 == nickp3) {
-    var nickp4 = Math.floor(Math.random() * 4);
+    var nickp4 = Math.floor(Math.random() * 8);
 }
 //branżówka w sumie nie powinna musieć całych pięciu lat ale to by było niezbalansowane
 const zawody = [
@@ -107,6 +114,7 @@ async function pytanieevent(pole) {
             async function handleClick2() {
                 document.getElementById('potwierdzEvent').removeEventListener('click', handleClick2);
                 efektevent = eventy[losowyevent].efekt;
+                statystyki[currentturn-1].pola_przejdniete=statystyki[currentturn-1].pola_przejdniete+(Math.abs(efektevent));
                 resolve(pole + efektevent);
             }
             document.getElementById('potwierdzEvent').addEventListener('click', handleClick2);
@@ -119,6 +127,7 @@ async function pytanieevent(pole) {
         //losowanie poprawnej odpowiedzi, w finalniej wersji będzie ona pobrana wraz z pytaniem z odpowiedniego pliku
         losowepytanie = Math.floor(Math.random() * 40);
         correctanwser = zawodowe[losowepytanie].prawidlowaodp;
+        statystyki[currentturn-1].zapytane_pytania++;
         //wyświetlenie poprawnej odpowiedz w dokumencie, do usunięcia
         document.getElementById("odp").innerHTML = correctanwser;
         document.getElementById("trescPytaniaNaKarcie").innerHTML = (zawodowe[losowepytanie].tresc + "</br>A: " + zawodowe[losowepytanie].odpa + "</br>B: " + zawodowe[losowepytanie].odpb + "</br>C: " + zawodowe[losowepytanie].odpc + "</br>D: " + zawodowe[losowepytanie].odpd);
@@ -137,11 +146,13 @@ async function pytanieevent(pole) {
                 document.getElementById('odpbuttond').removeEventListener('click', handleClick);
                 //sprawdzamy czy odp jest prawidłowa, wiemy którą odpowiedź wybrał gracz z funkcji odp która jest onclick-iem każdego buttona
                 if (wybranaodp == correctanwser) {
+                    statystyki[currentturn-1].poprawne_odpowiedzi++;
                     efektpytanie = 5;
                 }
                 if (wybranaodp != correctanwser) {
                     efektpytanie = -5;
                 }
+                statystyki[currentturn-1].pola_przejdniete=statystyki[currentturn-1].pola_przejdniete+(Math.abs(efektpytanie));
                 resolve(pole + efektpytanie);
             }
             //po spełnieniu promise-u usuwamy eventlistener z guzików
@@ -167,10 +178,12 @@ async function odp(abcd) {
 
 //onclick kostki
 async function rzut() {
+    statystyki[currentturn-1].rzuty_kostka++;
     //wyłącza kostke żeby funkcja nie została wywołana po raz drugi kiedy jeszcze trwa
     document.getElementById("kostka").disabled = true;
     //losuje wynik rzutu
     var wynikrzutu = (Math.floor(Math.random() * 6) + 1);
+    statystyki[currentturn-1].pola_przejdniete=statystyki[currentturn-1].pola_przejdniete+wynikrzutu;
     //swtch który sprawdza którego gracza kolej, są identyczne więc zostawię komentarze tylko do gracza 1
     switch (currentturn) {
         case 1:
@@ -182,6 +195,7 @@ async function rzut() {
                 klasap1++;
                 //jeżeli gracz obszedł planszę 5 razy gra się kończy
                 if (klasap1 == 6) {
+                    klasap1=5;
                     koniecgry(1);
                 }
                 //wypisujemy klasę w dokumencie
@@ -196,6 +210,7 @@ async function rzut() {
                 polep1 = polep1 - 52;
                 klasap1++;
                 if (klasap1 == 6) {
+                    klasap1=5;
                     koniecgry(1);
                 }
                 document.getElementById('klasap1').innerHTML = klasap1;
@@ -207,6 +222,7 @@ async function rzut() {
                 } else {
                     polep1 = polep1 + 52;
                     klasap1--;
+                    statystyki[currentturn-1].klasy_powtorzone++;
                     document.getElementById('klasap1').innerHTML = klasap1;
                 }
             }
@@ -219,6 +235,7 @@ async function rzut() {
                 polep2 = polep2 - 52;
                 klasap2++;
                 if (klasap2 == 6) {
+                    klasap2=5;
                     koniecgry(2);
                 }
                 document.getElementById('klasap2').innerHTML = klasap2;
@@ -229,6 +246,7 @@ async function rzut() {
                 polep2 = polep2 - 52;
                 klasap2++;
                 if (klasap2 == 6) {
+                    klasap2=5;
                     koniecgry(2);
                 }
                 document.getElementById('klasap2').innerHTML = klasap2;
@@ -238,6 +256,7 @@ async function rzut() {
                 } else {
                     polep2 = polep2 + 52;
                     klasap2--;
+                    statystyki[currentturn-1].klasy_powtorzone++;
                     document.getElementById('klasap2').innerHTML = klasap2;
                 }
             }
@@ -249,6 +268,7 @@ async function rzut() {
                 polep3 = polep3 - 52;
                 klasap3++;
                 if (klasap3 == 6) {
+                    klasap3=5;
                     koniecgry(3);
                 }
                 document.getElementById('klasap3').innerHTML = klasap3;
@@ -259,6 +279,7 @@ async function rzut() {
                 polep3 = polep3 - 52;
                 klasap3++;
                 if (klasap3 == 6) {
+                    klasap3=5;
                     koniecgry(3);
                 }
                 document.getElementById('klasap3').innerHTML = klasap3;
@@ -268,6 +289,7 @@ async function rzut() {
                 } else {
                     polep3 = polep3 + 52;
                     klasap3--;
+                    statystyki[currentturn-1].klasy_powtorzone++;
                     document.getElementById('klasap3').innerHTML = klasap3;
                 }
             }
@@ -279,6 +301,7 @@ async function rzut() {
                 polep4 = polep4 - 52;
                 klasap4++;
                 if (klasap4 == 6) {
+                    klasap4=5;
                     koniecgry(4);
                 }
                 document.getElementById('klasap4').innerHTML = klasap4;
@@ -289,6 +312,7 @@ async function rzut() {
                 polep4 = polep4 - 52;
                 klasap4++;
                 if (klasap4 == 6) {
+                    klasap4=5;
                     koniecgry(4);
                 }
                 document.getElementById('klasap4').innerHTML = klasap4;
@@ -298,6 +322,7 @@ async function rzut() {
                 } else {
                     polep4 = polep4 + 52;
                     klasap4--;
+                    statystyki[currentturn-1].klasy_powtorzone++;
                     document.getElementById('klasap4').innerHTML = klasap4;
                 }
             }
@@ -328,13 +353,55 @@ async function rzut() {
 
 //funkcja która kończy grę (jeszcze nie kończy ale do tego służy)
 function koniecgry(winner) {
-    alert("KONIEC GRY, GRACZ " + winner + " IDZIE NA STUDIA A RESZTA POWTARZA ROK!");
-    //tutaj wyświetlą się świadectwa następnie gra wróci na stronę główną
+    koniecgryvar=true;
+        odlozKarteEvent;
+        odlozKartePytanie;
+        document.getElementById("kostka").disabled=true;
+        switch(statystyki[winner-1].pola_przejdniete%10){
+            case 0:
+                var polaword="pól";
+                break;
+            case 1:
+                var polaword="pól";
+                break;
+            case 2:
+                var polaword="pola";
+                break;
+            case 3:
+                var polaword="pola";
+                break;
+            case 4:
+                var polaword="pola";
+                break;
+            default:
+                var polaword="pól";
+                break;
+        }
+        switch(winner){
+            case 1:
+                document.getElementById("trescEventuNaKarcie").innerHTML =
+                ('<p>Gratulacje '+nick[nickp1]+'! Ukończyłeś symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>Rzuciłeś kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>Przeszedłeś przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>Odpowiedziałeś poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> Powtarzałeś klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
+                break;
+            case 2:
+                document.getElementById("trescEventuNaKarcie").innerHTML =
+                ('<p>Gratulacje '+nick[nickp2]+'! Ukończyłeś symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>Rzuciłeś kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>Przeszedłeś przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>Odpowiedziałeś poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> Powtarzałeś klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
+                break;
+            case 3:
+                document.getElementById("trescEventuNaKarcie").innerHTML =
+                ('<p>Gratulacje '+nick[nickp3]+'! Ukończyłeś symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>Rzuciłeś kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>Przeszedłeś przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>Odpowiedziałeś poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> Powtarzałeś klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
+                break;
+            case 4:
+                document.getElementById("trescEventuNaKarcie").innerHTML =
+                ('<p>Gratulacje '+nick[nickp4]+'! Ukończyłeś symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>Rzuciłeś kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>Przeszedłeś przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>Odpowiedziałeś poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> Powtarzałeś klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
+                break;
+        }
+        document.getElementById("eventbutton").innerHTML='<button id="potwierdzEvent" type="button" class="odpbutton" onclick="resetgame()">OK</button>';
+        kartaWyciagnietaEvent();
 }
 function back() {
     if(animacjaKartyZaczetaEvent==false&&animacjaKartyZaczetaPytanie==false){
     document.getElementById("kostka").disabled=true;
-    document.getElementById("trescPytaniaNaKarcie").innerHTML = ('Czy na pewno chcesz zakończyć grę?</br><button onclick="resetgame()" type="button">Tak</button> <button onclick="continuegame()" type="button">Nie</button>');
+    document.getElementById("trescPytaniaNaKarcie").innerHTML = ('<p>Czy na pewno chcesz zakończyć grę?</p><button class="odpbutton" onclick="resetgame()" type="button">Tak</button> <button onclick="continuegame()" class="odpbutton" type="button">Nie</button>');
     document.getElementById("pytanie").style.display="none";
     kartaWyciagnietaPytanie();
     }
