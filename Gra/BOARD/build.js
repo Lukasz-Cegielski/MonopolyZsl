@@ -37,19 +37,20 @@ var statystyki=[
     {gracz:4,rzuty_kostka:0,zapytane_pytania:0,poprawne_odpowiedzi:0,pola_przejdniete:0,klasy_powtorzone:0},
 ];
 //losowanie nicków i zawodów
-const nick = ["Słowackiewicz", "Roztańczona parabola", "Goblin z 09a", "#1 Kuli fan", "Spadający sufit", "Napęd grawitacyjny", "Tux z Linux", "5318008"];
-var nickp1 = Math.floor(Math.random() * 8);
-var nickp2 = Math.floor(Math.random() * 8);
+const nick = ["Słowackiewicz", "Roztańczona parabola", "Goblin z 09a", "#1 Kuli fan", "Spadający sufit", "Napęd grawitacyjny", "Tux z Linux", "5318008", "Stołówkarz", "Ławka trzyosobowa", "Technikumpilled ZSŁcel"];
+const nickplec = ["M","K","M","M","M","M","M","M","M","K","M"];
+var nickp1 = Math.floor(Math.random() * 11);
+var nickp2 = Math.floor(Math.random() * 11);
 while (nickp2 == nickp1) {
-    var nickp2 = Math.floor(Math.random() * 8);
+    var nickp2 = Math.floor(Math.random() * 11);
 }
-var nickp3 = Math.floor(Math.random() * 8);
+var nickp3 = Math.floor(Math.random() * 11);
 while (nickp3 == nickp1 || nickp3 == nickp2) {
-    var nickp3 = Math.floor(Math.random() * 8);
+    var nickp3 = Math.floor(Math.random() * 11);
 }
-var nickp4 = Math.floor(Math.random() * 8);
+var nickp4 = Math.floor(Math.random() * 11);
 while (nickp4 == nickp1 || nickp4 == nickp2 || nickp4 == nickp3) {
-    var nickp4 = Math.floor(Math.random() * 8);
+    var nickp4 = Math.floor(Math.random() * 11);
 }
 //branżówka w sumie nie powinna musieć całych pięciu lat ale to by było niezbalansowane
 const zawody = [
@@ -98,6 +99,7 @@ document.getElementById("odpbuttonb").disabled = true;
 document.getElementById("odpbuttonc").disabled = true;
 document.getElementById("odpbuttond").disabled = true;
 document.getElementById('currentturn').innerHTML = nick[nickp1];
+document.getElementById('nazwakarty').innerHTML ="ZSŁ SIM "+nick[nickp1];
 
 //funkcja odpowiedzialna za działanie pytań i eventów, jeszcze nie kompletna z uwagi na brak takowych ale powinna być łatwa do zmodyfikowania kiedy będzie to potrzebne. Funkcja jest async żeby kod nie działał dalej kiedy oczekujemy na wybór odpowiedzi
 async function pytanieevent(pole) {
@@ -337,15 +339,19 @@ async function rzut() {
     switch (currentturn) {
         case 1:
             document.getElementById('currentturn').innerHTML = nick[nickp1];
+            document.getElementById('nazwakarty').innerHTML ="ZSŁ SIM "+nick[nickp1];
             break;
         case 2:
             document.getElementById('currentturn').innerHTML = nick[nickp2];
+            document.getElementById('nazwakarty').innerHTML ="ZSŁ SIM "+nick[nickp2];
             break;
         case 3:
             document.getElementById('currentturn').innerHTML = nick[nickp3];
+            document.getElementById('nazwakarty').innerHTML ="ZSŁ SIM "+nick[nickp3];
             break;
         case 4:
             document.getElementById('currentturn').innerHTML = nick[nickp4];
+            document.getElementById('nazwakarty').innerHTML ="ZSŁ SIM "+nick[nickp4];
             break;
     };
     //włączenie z powrotem kostki przeniosłem do scriptkart.js
@@ -357,6 +363,11 @@ function koniecgry(winner) {
         odlozKarteEvent;
         odlozKartePytanie;
         document.getElementById("kostka").disabled=true;
+        var ukonczyłes = "Ukończyłeś";
+        var rzuciles = "Rzuciłeś";
+        var przeszedles = "Przeszedłeś";
+        var odpowiedziales = "Odpowiedziałeś";
+        var powtarzales = "Powtarzałeś";
         switch(statystyki[winner-1].pola_przejdniete%10){
             case 0:
                 var polaword="pól";
@@ -379,20 +390,48 @@ function koniecgry(winner) {
         }
         switch(winner){
             case 1:
+                if(nickplec[nickp1]="K"){
+                    ukonczyłes="Ukończyłaś";
+                    rzuciles="Rzuciłaś";
+                    przeszedles="Przeszłaś";
+                    odpowiedziales="Odpowiedziałaś";
+                    powtarzales="Powtarzałaś";
+                }
                 document.getElementById("trescEventuNaKarcie").innerHTML =
-                ('<p>Gratulacje '+nick[nickp1]+'! Ukończyłeś symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>Rzuciłeś kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>Przeszedłeś przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>Odpowiedziałeś poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> Powtarzałeś klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
+                ('<p>Gratulacje '+nick[nickp1]+'! '+ukonczyłes+' symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>'+rzuciles+' kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>'+przeszedles+' przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>'+odpowiedziales+' poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> '+powtarzales+' klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
                 break;
             case 2:
+                if(nickplec[nickp2]="K"){
+                    ukonczyłes="Ukończyłaś";
+                    rzuciles="Rzuciłaś";
+                    przeszedles="Przeszłaś";
+                    odpowiedziales="Odpowiedziałaś";
+                    powtarzales="Powtarzałaś";
+                }
                 document.getElementById("trescEventuNaKarcie").innerHTML =
-                ('<p>Gratulacje '+nick[nickp2]+'! Ukończyłeś symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>Rzuciłeś kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>Przeszedłeś przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>Odpowiedziałeś poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> Powtarzałeś klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
+                ('<p>Gratulacje '+nick[nickp2]+'! '+ukonczyłes+' symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>'+rzuciles+' kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>'+przeszedles+' przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>'+odpowiedziales+' poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> '+powtarzales+' klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
                 break;
             case 3:
+                if(nickplec[nickp3]="K"){
+                    ukonczyłes="Ukończyłaś";
+                    rzuciles="Rzuciłaś";
+                    przeszedles="Przeszłaś";
+                    odpowiedziales="Odpowiedziałaś";
+                    powtarzales="Powtarzałaś";
+                }
                 document.getElementById("trescEventuNaKarcie").innerHTML =
-                ('<p>Gratulacje '+nick[nickp3]+'! Ukończyłeś symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>Rzuciłeś kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>Przeszedłeś przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>Odpowiedziałeś poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> Powtarzałeś klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
+                ('<p>Gratulacje '+nick[nickp3]+'! '+ukonczyłes+' symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>'+rzuciles+' kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>'+przeszedles+' przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>'+odpowiedziales+' poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> '+powtarzales+' klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
                 break;
             case 4:
+                if(nickplec[nickp4]="K"){
+                    ukonczyłes="Ukończyłaś";
+                    rzuciles="Rzuciłaś";
+                    przeszedles="Przeszłaś";
+                    odpowiedziales="Odpowiedziałaś";
+                    powtarzales="Powtarzałaś";
+                }
                 document.getElementById("trescEventuNaKarcie").innerHTML =
-                ('<p>Gratulacje '+nick[nickp4]+'! Ukończyłeś symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>Rzuciłeś kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>Przeszedłeś przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>Odpowiedziałeś poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> Powtarzałeś klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
+                ('<p>Gratulacje '+nick[nickp4]+'! '+ukonczyłes+' symulator Zespołu Szkół Łączności.</p><p>Aby to zrobić:</p><p>'+rzuciles+' kostką '+statystyki[winner-1].rzuty_kostka+' razy.</p><p>'+przeszedles+' przez '+statystyki[winner-1].pola_przejdniete+' '+polaword+'.</p><p>'+odpowiedziales+' poprawnie na '+statystyki[winner-1].poprawne_odpowiedzi+' z '+statystyki[winner-1].zapytane_pytania+' zadanych pytań.</p><p> '+powtarzales+' klasę '+statystyki[winner-1].klasy_powtorzone+' razy.</p>');
                 break;
         }
         document.getElementById("eventbutton").innerHTML='<button id="potwierdzEvent" type="button" class="odpbutton" onclick="resetgame()">OK</button>';
