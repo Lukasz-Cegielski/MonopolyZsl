@@ -37,20 +37,20 @@ var statystyki=[
     {gracz:4,rzuty_kostka:0,zapytane_pytania:0,poprawne_odpowiedzi:0,pola_przejdniete:0,klasy_powtorzone:0},
 ];
 //losowanie nicków i zawodów
-const nick = ["Słowackiewicz", "Roztańczona parabola", "Goblin z 09a", "#1 Kuli fan", "Spadający sufit", "Napęd grawitacyjny", "Tux z Linux", "5318008", "Stołówkarz", "Ławka trzyosobowa", "Technikumpilled ZSŁcel"];
-const nickplec = ["M","K","M","M","M","M","M","M","M","K","M"];
-var nickp1 = Math.floor(Math.random() * 11);
-var nickp2 = Math.floor(Math.random() * 11);
+const nick = ["Słowackiewicz", "Roztańczona parabola", "Goblin z 09a", "#1 Kuli fan", "Spadający sufit", "Napęd grawitacyjny", "Tux z Linux", "5318008", "Stołówkarz", "Ławka trzyosobowa", "Technikumpilled ZSŁcel","Samian","Rzułty Warol","Sigma female"];
+const nickplec = ["M","K","M","M","M","M","M","K","M","K","M","M","M","K"];
+var nickp1 = Math.floor(Math.random() * 14);
+var nickp2 = Math.floor(Math.random() * 14);
 while (nickp2 == nickp1) {
-    var nickp2 = Math.floor(Math.random() * 11);
+    var nickp2 = Math.floor(Math.random() * 14);
 }
-var nickp3 = Math.floor(Math.random() * 11);
+var nickp3 = Math.floor(Math.random() * 14);
 while (nickp3 == nickp1 || nickp3 == nickp2) {
-    var nickp3 = Math.floor(Math.random() * 11);
+    var nickp3 = Math.floor(Math.random() * 14);
 }
-var nickp4 = Math.floor(Math.random() * 11);
+var nickp4 = Math.floor(Math.random() * 14);
 while (nickp4 == nickp1 || nickp4 == nickp2 || nickp4 == nickp3) {
-    var nickp4 = Math.floor(Math.random() * 11);
+    var nickp4 = Math.floor(Math.random() * 14);
 }
 //branżówka w sumie nie powinna musieć całych pięciu lat ale to by było niezbalansowane
 const zawody = [
@@ -332,7 +332,7 @@ async function rzut() {
             break;
     };
     //zmiana tury
-    if (currentturn == iloscgraczy) {
+    if (currentturn >= iloscgraczy) {
         currentturn = 1;
     } else { currentturn++; };
     //switch żeby tura pokazywała się jako nick gracza a nie cyfra
