@@ -23,7 +23,7 @@ const eventy=[
 { idx:21, tresc:"Dostajesz pochwałę za 100% frekwencję za półrocze.</br>Idziesz do przodu o 3 pola.", efekt:(3) },
 { idx:22, tresc:"Dostajesz pochwałę za 100% frekwencję za cały rok.</br>Idziesz do przodu o 4 pola.", efekt:(4) },
 { idx:23, tresc:"Nie udało ci się zaliczyć półrocza.</br>Cofasz się o 10 pól.", efekt:(-10) },
-{ idx:24, tresc:"Nauczyciel przyłapał cię na używaniu telefonu. Na szczęśćie kazał ci tylko go schować.</br>Nic się nie dzieje.", efekt:(0) },
+{ idx:24, tresc:"Nauczyciel przyłapał cię na używaniu telefonu. Na szczęście kazał ci tylko go schować.</br>Nic się nie dzieje.", efekt:(0) },
 { idx:25, tresc:"Nauczyciel przyłapał cię na używaniu telefonu. Niestety nie był łaskawy i dotajesz 1.</br>Cofasz się o 3 pola.", efekt:(-3) },
 { idx:26, tresc:"Nauczyciel przyłapał cię na używaniu telefonu. Spytał się co tam na nim masz za ty postanowiłeś podzielić się tą informacją co rozbawiło nauczyciela.</br>Idziesz o 1 pole do przodu.", efekt:(1) },
 { idx:27, tresc:"Zasneło ci się na lekcji. Nauczyciel postanowił dać ci uwagę.</br>Cofasz się o 2 pola.", efekt:(-2) },
