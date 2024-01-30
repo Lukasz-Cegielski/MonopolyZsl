@@ -1,3 +1,16 @@
+body {
+    
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    /* justify-content: center; */
+    background-image: url(blat.jpg);
+    background-size: repeat;
+    background-size: 25%;
+    font-family: 'Noto Sans', sans-serif;
+    src: 'NotoSans-Regular.ttf';
+}
 .all {
     display: flex;
     justify-content: space-around;
@@ -7,33 +20,32 @@
     margin-bottom: 6vh;
     /* height: 40h;*/
 }
-
 #danegracza1 {
-    /* border: 2vb solid red; */
+    border: 1vb solid rgb(235, 65, 75);
     height: 16vh;
-    background-color: red;
-    font-size: 2.5vh;
+    background-color: rgb(255, 85, 85);
+    font-size: 2.2vh;
 }
 
 #danegracza2 {
-    /* border: 2vb solid blue; */
+    border: 1vb solid rgb(53, 55, 235);
     height: 16vh;
-    background-color: blue;
-    font-size: 2.5vh;
+    background-color: rgb(75, 75, 245);
+    font-size: 2.2vh;
 }
 
 #danegracza3 {
-    /* border: 2vb solid yellow; */
+     border: 1vb solid rgb(235, 235, 60); 
     height: 16vh;
-    background-color: yellow;
-    font-size: 2.5vh;
+    background-color: rgb(255, 255, 80);
+    font-size:2.2vh;
 }
 
 #danegracza4 {
-    /* border: 2vb solid green; */
+    border: 1vb solid rgb(80, 235, 90);
     height: 16vh;
-    background-color: green;
-    font-size: 2.5vh;
+    background-color: rgb(100, 255, 100);
+    font-size: 2.2vh;
 }
 
 .tura {
@@ -49,18 +61,6 @@
 .calosc {
     display: flex;
 }
-
-body {
-    margin: 0;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    /* justify-content: center; */
-    background-image: url(blat.jpg);
-    background-size: repeat;
-    background-size: 25%;
-}
-
 #plansza {
     /* margin-top: 8%; */
     width: 50vw;
