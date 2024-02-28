@@ -88,7 +88,7 @@ body {
 .pole {
     width: 6vh;
     height: 6vh;
-    margin: 0.2%;
+    margin: 0.2vh;
     border: 0.25vh solid black;
     background-color: white;
 }
@@ -97,8 +97,8 @@ body {
     /* background-color: red; */
     width: 6vh;
     height: 6vh;
+    margin: 0.2vh;
     border: 0.25vh solid transparent;
-    margin: 0.2%;
 }
 
 /* #p1 {
@@ -136,4 +136,55 @@ body {
     background-size: cover;
     border: 0;
     background-color: transparent;
+}
+
+#pionek {
+    margin-left: 6.5vh;
+    width: 10vh; /* Dostosuj szerokość pionka */
+    height:10vh; /* Dostosuj wysokość pionka */
+    /*background-color: rgb(255, 85, 85);;  Dostosuj kolor pionka */
+    background-image: url('czerwony_pionek.gif');
+    background-repeat: repeat-y;
+    background-size: 100%;
+    position: absolute;
+    /*border-radius: 50%; /* Opcjonalnie, aby uzyskać efekt zaokrąglonego pionka */
+}
+
+#pionek2 {
+    margin-left: 7.5vh;
+    
+    width: 10vh; /* Dostosuj szerokość pionka */
+    height: 10vh; /* Dostosuj wysokość pionka */
+    /*background-color: rgb(75, 75, 245); /* Dostosuj kolor pionka */
+    background-image: url('niebieski_pionek.gif');
+    background-repeat: repeat-y;
+    background-size: 100%;
+    position: absolute;
+    /*border-radius: 50%; /* Opcjonalnie, aby uzyskać efekt zaokrąglonego pionka */
+}
+
+#pionek3 {
+    margin-left: 8.5vh;
+    
+    width: 10vh; /* Dostosuj szerokość pionka */
+    height: 10vh; /* Dostosuj wysokość pionka */
+    /*background-color:rgb(255, 255, 80); /* Dostosuj kolor pionka */
+    background-image: url('zolty_pionek.gif');
+    background-repeat: repeat-y;
+    background-size: 100%;
+    position: absolute;
+    /*border-radius: 50%; /* Opcjonalnie, aby uzyskać efekt zaokrąglonego pionka */
+}
+
+#pionek4 {
+    margin-left: 9.5vh;
+    
+    width: 10vh; /* Dostosuj szerokość pionka */
+    height: 10vh; /* Dostosuj wysokość pionka */
+    /*background-color:rgb(100, 255, 100); /* Dostosuj kolor pionka */
+    background-image: url('zielony_pionek.gif');
+    background-repeat: repeat-y;
+    background-size: 100%;
+    position: absolute;
+    /*border-radius: 50%; /* Opcjonalnie, aby uzyskać efekt zaokrąglonego pionka */
 }
