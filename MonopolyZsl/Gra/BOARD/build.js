@@ -117,6 +117,7 @@ async function pytanieevent(pole) {
                 efektevent = eventy[losowyevent].efekt;
                 statystyki[currentturn-1].pola_przejdniete=statystyki[currentturn-1].pola_przejdniete+(Math.abs(efektevent));
                 await ruchpionkiem(statystyki[currentturn-1].pole,efektevent,statystyki[currentturn-1].klasa,currentturn);
+                animacjakartyzinfo(statystyki[currentturn-1].pole,statystyki[currentturn-1].klasa,efektevent,currentturn);
                 resolve(pole + efektevent);
             }
             document.getElementById('potwierdzEvent').addEventListener('click', handleClick2);
@@ -156,6 +157,7 @@ async function pytanieevent(pole) {
                 }
                 statystyki[currentturn-1].pola_przejdniete=statystyki[currentturn-1].pola_przejdniete+(Math.abs(efektpytanie));
                 await ruchpionkiem(statystyki[currentturn-1].pole,efektpytanie,statystyki[currentturn-1].klasa,currentturn);
+                animacjakartyzinfo(statystyki[currentturn-1].pole,statystyki[currentturn-1].klasa,efektpytanie,currentturn);
                 resolve(pole + efektpytanie);
             }
             //po spełnieniu promise-u usuwamy eventlistener z guzików
@@ -187,6 +189,7 @@ async function rzut() {
     //losuje wynik rzutu
     var wynikrzutu = (Math.floor(Math.random() * 6) + 1);
     await ruchpionkiem(statystyki[currentturn-1].pole,wynikrzutu,statystyki[currentturn-1].klasa,currentturn);
+    animacjakartyzinfo(statystyki[currentturn-1].pole,statystyki[currentturn-1].klasa,wynikrzutu,currentturn);
     statystyki[currentturn-1].pola_przejdniete=statystyki[currentturn-1].pola_przejdniete+wynikrzutu;
     //swtch który sprawdza którego gracza kolej, są identyczne więc zostawię komentarze tylko do gracza 1
     statystyki[currentturn-1].pole = statystyki[currentturn-1].pole + wynikrzutu;
@@ -314,7 +317,6 @@ async function zmianapozycji(gracz){
         statystyki[gracz-1].klasa="Szkoła ukończona";
         koniecgry(gracz);
     }
-    document.getElementById('polep'+gracz).innerHTML = statystyki[gracz-1].pole;
     document.getElementById('klasap'+gracz).innerHTML = statystyki[gracz].klasa;
     //to na wypadek gdyby gracz cofnął się przed pierwsze pole, gracz cofa się o klasę albo zatrzymuje na pole 1 klasa 1
     if (statystyki[gracz-1].pole < 1) {
@@ -324,10 +326,36 @@ async function zmianapozycji(gracz){
             statystyki[gracz-1].pole = statystyki[gracz-1].pole + 52;
             statystyki[gracz-1].klasa--;
             statystyki[currentturn-1].klasy_powtorzone++;
-            document.getElementById('klasap'+gracz).innerHTML = statystyki[gracz-1].klasa;
+            
         }
     }
+    if(statystyki[gracz-1].pole==0){
+        statystyki[gracz-1].pole==1;
+    }
     //znowu wypisujemy pole
-    document.getElementById('polep'+gracz).innerHTML = statystyki[gracz-1].pole;
-    document.getElementById('klasap'+gracz).innerHTML = statystyki[gracz-1].klasa;
+    document.getElementById('klasap'+gracz).innerHTML=statystyki[currentturn-1].klasa;
+}
+
+var animacjakartyzinfocounter=0;
+
+function animacjakartyzinfo(pole,klasa,przesuniecie,gracz){
+    animacjakartyzinfocounter=0;
+    if(przesuniecie>0){
+        for(i=0;i<przesuniecie*213;i=i+213){
+            setTimeout(zmianapolanakarcie,i,1,gracz,przesuniecie);
+        }
+    }else{
+        for(i=0;i>przesuniecie*213;i=i-213){
+            setTimeout(zmianapolanakarcie,i*(-1),(-1),gracz,przesuniecie);
+        }
+    }
+}
+
+function zmianapolanakarcie(kierunek,gracz,przesuniecie){
+    animacjakartyzinfocounter++;
+    if(animacjakartyzinfocounter==Math.abs(przesuniecie)){
+        document.getElementById('polep'+gracz).innerHTML=statystyki[gracz-1].pole;
+    }else{
+        document.getElementById('polep'+gracz).innerHTML = Number(document.getElementById('polep'+gracz).innerHTML)+kierunek;
+    }
 }

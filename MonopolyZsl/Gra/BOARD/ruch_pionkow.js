@@ -15,7 +15,7 @@ async function ruchpionkiem(obecnepole,przesuniecie,obecnaklasa,gracz){
                 obecnepole=obecnepole-52;
             }
         }
-    }else{  
+    }else{
         for(i=0;i>przesuniecie*213;i=i-213){
             if(obecnaklasa==1&&obecnepole==1){
             }
