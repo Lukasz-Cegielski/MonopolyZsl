@@ -134,7 +134,7 @@ async function pytanieevent(pole) {
         //pytanie
         kartaWyciagnietaPytanie();
         //losowanie poprawnej odpowiedzi, w finalniej wersji będzie ona pobrana wraz z pytaniem z odpowiedniego pliku
-        losowepytanie = Math.floor(Math.random() * 40); // zmienić na ilość pytań WAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNE
+        losowepytanie = Math.floor(Math.random() * 198); // zmienić na ilość pytań WAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNEWAZNE
         correctanwser = zawodowe[losowepytanie].prawidlowaodp;
         statystyki[currentturn - 1].zapytane_pytania++;
         //wyświetlenie poprawnej odpowiedz w dokumencie, do usunięcia
