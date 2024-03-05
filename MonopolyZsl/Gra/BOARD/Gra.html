@@ -57,7 +57,13 @@
         <div id="p4"></div>
         <div id="plansza">
             <div class="row">
-                <div class="pole" id="pole1"><div class="pionekred" id="pionekgracz1" style="left:0vh;top:0vh;bottom:0vh;right:0vh;"></div><div class="pionekblue"id="pionekgracz2" style="left:2.75vh;top:0vh;bottom:0vh;right:0vh;"></div><div class="pionekyellow"id="pionekgracz3"style="left:0vh;top:2.75vh;bottom:0vh;right:0vh;"></div><div class="pionekgreen"id="pionekgracz4"style="left:2.75vh;top:2.75vh;bottom:0vh;right:0vh;"></div></div>
+                <div class="pole" id="pole1">
+                    <div class="pionekred" id="pionekgracz1" style="left:0vh;top:0vh;bottom:0vh;right:0vh;"></div>
+                    <div class="pionekblue" id="pionekgracz2" style="left:2.75vh;top:0vh;bottom:0vh;right:0vh;"></div>
+                    <div class="pionekyellow" id="pionekgracz3" style="left:0vh;top:2.75vh;bottom:0vh;right:0vh;"></div>
+                    <div class="pionekgreen" id="pionekgracz4" style="left:2.75vh;top:2.75vh;bottom:0vh;right:0vh;">
+                    </div>
+                </div>
                 <div class="pole" id="pole2"></div>
                 <div class="pole" id="pole3"></div>
                 <div class="pole" id="pole4"></div>
@@ -287,7 +293,7 @@
                     <div class="kartaPytanieContent">
                         <p id="trescPytaniaNaKarcie" class="kartacontent">JESTEM PYTANIEM NA KARCIE</p>
                         <div id="pytanie" style="display: block">
-                            Prawidłowa odpowiedź:<b id="odp"></b></br>
+                            <!-- Prawidłowa odpowiedź:--><b id="odp"></b></br>
                             <button class="odpbutton" id="odpbuttona" onclick="odp('A');odlozKartePytanie();"
                                 type="button">A</button>
                             <button class="odpbutton" id="odpbuttonb" onclick="odp('B');odlozKartePytanie();"
@@ -305,7 +311,8 @@
                     <div class="kartaEventContent">
                         <p id="trescEventuNaKarcie" class="kartacontent">JESTEM EVENTEM NA KARCIE</p>
                         <div id="eventbutton">
-                        <button id="potwierdzEvent" class="odpbutton" type="button" onclick="odlozKarteEvent()">OK</button>
+                            <button id="potwierdzEvent" class="odpbutton" type="button"
+                                onclick="odlozKarteEvent()">OK</button>
                         </div>
                     </div>
                 </div>
