@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <script src="pytania.js"></script>
+    <script src="eventy.js"></script>
+    <link rel="stylesheet" href="stylekart.css">
+    <script src="scriptkart.js"></script>
+    <script src="skryptdomuzyki.js"></script>
+    <script src="jquery.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title id="nazwakarty">ZSŁ SIM</title>
+    <!--button do muzyki za nic nie działa nie ważne co robię ale jak wpiszecie muzykaon() w konsole to zagra-->
+</head>
+
+<body>
+    <div class="tura"> <!-- chciałbym dać tutaj jakko bg kawalek zeszytu -->
+        obecna tura: <b id="currentturn"></b>
+    </div>
+    <div class="calosc"> <!-- chcę żeby obecna tura była wyżej niż wszyskto więc potrzebuję tej klasy -->
+
+        <div class="all">
+            <div class="player" id="danegracza1">
+                nick: <b id="nickp1"></b></br>
+                pole: <b id="polep1"></b></br>
+                klasa: <b id="klasap1"></b></br>
+                kierunek: <b id="kierunekp1"></b></br>
+            </div>
+            <div class="player" id="danegracza2">
+                nick: <b id="nickp2"></b></br>
+                pole: <b id="polep2"></b></br>
+                klasa: <b id="klasap2"></b></br>
+                kierunek: <b id="kierunekp2"></b></br>
+            </div>
+            <div class="player" id="danegracza3">
+                nick: <b id="nickp3"></b></br>
+                pole: <b id="polep3"></b></br>
+                klasa: <b id="klasap3"></b></br>
+                kierunek: <b id="kierunekp3"></b></br>
+            </div>
+            <div class="player" id="danegracza4">
+                nick: <b id="nickp4"></b></br>
+                pole: <b id="polep4"></b></br>
+                klasa: <b id="klasap4"></b></br>
+                kierunek: <b id="kierunekp4"></b></br>
+            </div>
+        </div>
+        <!--   <button id="kostka" onclick="rzut()">Rzut kostką</button> -->
+        <!--  parzyste pola są pytaniami</br>
+        nieparzyste eventami</br> -->
+        <div id="p1"></div>
+        <div id="p2"></div>
+        <div id="p3"></div>
+        <div id="p4"></div>
+        <div id="plansza">
+            <div class="row">
+                <div class="pole" id="pole1">
+                    <div class="pionekred" id="pionekgracz1" style="left:0vh;top:0vh;bottom:0vh;right:0vh;"></div>
+                    <div class="pionekblue" id="pionekgracz2" style="left:2.75vh;top:0vh;bottom:0vh;right:0vh;"></div>
+                    <div class="pionekyellow" id="pionekgracz3" style="left:0vh;top:2.75vh;bottom:0vh;right:0vh;"></div>
+                    <div class="pionekgreen" id="pionekgracz4" style="left:2.75vh;top:2.75vh;bottom:0vh;right:0vh;">
+                    </div>
+                </div>
+                <div class="pole" id="pole2"></div>
+                <div class="pole" id="pole3"></div>
+                <div class="pole" id="pole4"></div>
+                <div class="pole" id="pole5"></div>
+                <div class="pole" id="pole6"></div>
+                <div class="pole" id="pole7"></div>
+                <div class="pole" id="pole8"></div>
+                <div class="pole" id="pole9"></div>
+                <div class="pole" id="pole10"></div>
+                <div class="pole" id="pole11"></div>
+                <div class="pole" id="pole12"></div>
+                <div class="pole" id="pole13"></div>
+                <div class="pole" id="pole14"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole52"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole15"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole51"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole16"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole50"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole17"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole49"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole18"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole48"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole19"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole47"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole20"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole46"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole21"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole45"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole22"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole44"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole23"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole43"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole24"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole42"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole25"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole41"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="puste_pole"></div>
+                <div class="pole" id="pole26"></div>
+            </div>
+            <div class="row">
+                <div class="pole" id="pole40"></div>
+                <div class="pole" id="pole39"></div>
+                <div class="pole" id="pole38"></div>
+                <div class="pole" id="pole37"></div>
+                <div class="pole" id="pole36"></div>
+                <div class="pole" id="pole35"></div>
+                <div class="pole" id="pole34"></div>
+                <div class="pole" id="pole33"></div>
+                <div class="pole" id="pole32"></div>
+                <div class="pole" id="pole31"></div>
+                <div class="pole" id="pole30"></div>
+                <div class="pole" id="pole29"></div>
+                <div class="pole" id="pole28"></div>
+                <div class="pole" id="pole27"></div>
+            </div>
+        </div>
+        <div class="karty">
+            <div id="kartaZPytaniemWrapper">
+                <div class="kartaZPytaniem" id="kartaZPytaniem" style="top:0%;">
+                    <div class="kartaPytanieContent">
+                        <p id="trescPytaniaNaKarcie" class="kartacontent">JESTEM PYTANIEM NA KARCIE</p>
+                        <div id="pytanie" style="display: block">
+                            <!-- Prawidłowa odpowiedź:--><b id="odp"></b></br>
+                            <button class="odpbutton" id="odpbuttona" onclick="odp('A');odlozKartePytanie();"
+                                type="button">A</button>
+                            <button class="odpbutton" id="odpbuttonb" onclick="odp('B');odlozKartePytanie();"
+                                type="button">B</button>
+                            <button class="odpbutton" id="odpbuttonc" onclick="odp('C');odlozKartePytanie();"
+                                type="button">C</button>
+                            <button class="odpbutton" id="odpbuttond" onclick="odp('D');odlozKartePytanie();"
+                                type="button">D</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="kartaZEventemWrapper">
+                <div class="kartaZEventem" id="kartaZEventem" style="top:0%;">
+                    <div class="kartaEventContent">
+                        <p id="trescEventuNaKarcie" class="kartacontent">JESTEM EVENTEM NA KARCIE</p>
+                        <div id="eventbutton">
+                            <button id="potwierdzEvent" class="odpbutton" type="button"
+                                onclick="odlozKarteEvent()">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stosKartPytanie">
+                <div class="kartaDoWyciagnieciaPytanie" id="kartaDoWyciagnieciaPytanie" style="top:30vh;">
+                </div>
+            </div>
+            <div class="stosKartEvent">
+                <div class="kartaDoWyciagnieciaEvent" id="kartaDoWyciagnieciaEvent" style="top:30vh;">
+                </div>
+            </div>
+
+        </div>
+        <button id="kostka" onclick="rzut()" type="button" style="z-index: 3;">Rzut kostką</button>
+        <div id="anim_kostki"></div>
+
+        <button class="mute" type="button" id="guzior" onclick="muzykaon()"><img src="mute-button.png" id="mute">
+            <audio src="track2-intro.mp3" id="audio">
+            </audio>
+        </button>
+        <button class="back" type="button" onclick="back()"></button>
+
+        <script src="build.js"></script>
+        <script src="ruch_pionkow.js"></script>
+    </div>
+</body>
+
+</html>
