@@ -1,21 +1,3 @@
-const maturalne1 = {
-    tresc: "Oblicz wartość wyrażenia: 2x^2 + 3x - 5 dla x = 2.",
-    odpa: "5",
-    odpb: "11",
-    odpc: "-3",
-    odpd: "7",
-    prawidlowaodp: "B"
-};
-
-const maturalne2 = {
-    tresc: "Rozwiąż równanie kwadratowe: x^2 - 4x + 3 = 0.",
-    odpa: "x = 1, x = 3",
-    odpb: "x = 1, x = 3",
-    odpc: "x = 3, x = -1",
-    odpd: "x = 1, x = -3",
-    prawidlowaodp: "B"
-};
-
 const maturalne3 = {
     tresc: "Jakie są współrzędne punktu przecięcia się prostej o równaniu y = 2x + 1 i prostej o równaniu y = -3x + 5?",
     odpa: "(2, 5)",
