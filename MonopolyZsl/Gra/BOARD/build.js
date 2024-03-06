@@ -192,7 +192,8 @@ async function rzut() {
     statystyki[currentturn - 1].rzuty_kostka++;
     //wyłącza kostke żeby funkcja nie została wywołana po raz drugi kiedy jeszcze trwa
     document.getElementById("kostka").disabled = true;
-    document.getElementById("anim_kostki").style.backgroundImage = "url('animacja_kostki.gif')";
+    document.getElementById("anim_kostki").style.backgroundImage = "url('animacja_kostki2.gif')";
+    //document.getElementById("anim_kostki").style.backgroundImage = "url('animacja_kostki.gif')";
     setTimeout(waitt, 4000);
     //losuje wynik rzutu
     var wynikrzutu = (Math.floor(Math.random() * 6) + 1);
