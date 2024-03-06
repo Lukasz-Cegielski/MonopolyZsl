@@ -102,9 +102,9 @@ document.getElementById('nazwakarty').innerHTML = "ZSŁ SIM " + nick[statystyki[
 
 
 
-function waitt() { //czeka aż się skończy animacja kostki
+/*function waitt() { //czeka aż się skończy animacja kostki
     document.getElementById("anim_kostki").style.backgroundImage = "url('s1.png')";
-}
+}*/
 
 //funkcja odpowiedzialna za działanie pytań i eventów, jeszcze nie kompletna z uwagi na brak takowych ale powinna być łatwa do zmodyfikowania kiedy będzie to potrzebne. Funkcja jest async żeby kod nie działał dalej kiedy oczekujemy na wybór odpowiedzi
 async function pytanieevent(pole) {
@@ -192,9 +192,10 @@ async function rzut() {
     statystyki[currentturn - 1].rzuty_kostka++;
     //wyłącza kostke żeby funkcja nie została wywołana po raz drugi kiedy jeszcze trwa
     document.getElementById("kostka").disabled = true;
-    document.getElementById("anim_kostki").style.backgroundImage = "url('animacja_kostki2.gif')";
+    //document.getElementById("anim_kostki").style.backgroundImage = "url('animacja_kostki2.gif')";
     //document.getElementById("anim_kostki").style.backgroundImage = "url('animacja_kostki.gif')";
-    setTimeout(waitt, 4000);
+    document.getElementById("anim_kostki").src('animacja_kostki2.gif');
+    //setTimeout(waitt, 4000);
     //losuje wynik rzutu
     var wynikrzutu = (Math.floor(Math.random() * 6) + 1);
     await ruchpionkiem(statystyki[currentturn - 1].pole, wynikrzutu, statystyki[currentturn - 1].klasa, currentturn);
