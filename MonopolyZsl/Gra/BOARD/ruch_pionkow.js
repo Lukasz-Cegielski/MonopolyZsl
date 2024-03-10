@@ -4,7 +4,7 @@ var direction = ["left","top","right","bottom"];
 var gracze = ["pionekgracz1","pionekgracz2","pionekgracz3","pionekgracz4"];
 const board=[4,0,0,0,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,1,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3];
 
-async function ruchpionkiem(obecnepole,przesuniecie,obecnaklasa,gracz){
+function ruchpionkiem(obecnepole,przesuniecie,obecnaklasa,gracz){
     //do przodu
     if(przesuniecie>=0){
         for(i=0;i<przesuniecie*213;i=i+213){

@@ -193,7 +193,7 @@ async function rzut() {
     //losuje wynik rzutu
     var wynikrzutu = (Math.floor(Math.random() * 6) + 1);
     animacjarzutukostka(wynikrzutu);
-    await ruchpionkiem(statystyki[currentturn-1].pole,wynikrzutu,statystyki[currentturn-1].klasa,currentturn);
+    ruchpionkiem(statystyki[currentturn-1].pole,wynikrzutu,statystyki[currentturn-1].klasa,currentturn);
     animacjakartyzinfo(statystyki[currentturn-1].pole,statystyki[currentturn-1].klasa,wynikrzutu,currentturn);
     statystyki[currentturn-1].pola_przejdniete=statystyki[currentturn-1].pola_przejdniete+wynikrzutu;
     //swtch który sprawdza którego gracza kolej, są identyczne więc zostawię komentarze tylko do gracza 1
@@ -370,7 +370,7 @@ function zmianapolanakarcie(kierunek,gracz,przesuniecie){
 
 function animacjarzutukostka(wynikrzutuanim){
     counterkostkaanim=0;
-    for(i=0;i<1100;i=i+100){
+    for(i=0;i<2343;i=i+213){
         setTimeout(zmienimgkostki,i,wynikrzutuanim)
     }
 }
