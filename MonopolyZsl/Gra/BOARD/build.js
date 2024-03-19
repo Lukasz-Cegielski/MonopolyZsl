@@ -135,8 +135,7 @@ async function pytanieevent(pole) {
         losowepytanie = Math.floor(Math.random() * 198); //zmieniac wraz z wzrostem ilosci pytan Wazne!!
         correctanwser = zawodowe[losowepytanie].prawidlowaodp;
         statystyki[currentturn-1].zapytane_pytania++;
-        //wyświetlenie poprawnej odpowiedz w dokumencie, do usunięcia
-        document.getElementById("odp").innerHTML = correctanwser;
+        console.log(correctanswer);
         document.getElementById("trescPytaniaNaKarcie").innerHTML = (zawodowe[losowepytanie].tresc + "</br>A: " + zawodowe[losowepytanie].odpa + "</br>B: " + zawodowe[losowepytanie].odpb + "</br>C: " + zawodowe[losowepytanie].odpc + "</br>D: " + zawodowe[losowepytanie].odpd);
         //uruchomienie guzików
         document.getElementById("odpbuttona").disabled = false;
